@@ -1,0 +1,301 @@
+/* ========================================
+   Weekly Reports — 共享 Newsletter 样式
+   无外部依赖，系统字体栈，响应式
+   ======================================== */
+
+/* --- 变量：两份周报各自覆盖 --- */
+:root {
+  --color-primary: #9a3412;
+  --color-accent: #ea580c;
+  --color-bg-light: #fff7ed;
+  --color-card: #ffffff;
+  --color-text: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-border: #e2e8f0;
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+  --color-neutral: #94a3b8;
+  --max-width: 720px;
+  --radius: 8px;
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif;
+}
+
+/* --- 基础重置 --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-stack);
+  color: var(--color-text);
+  background: #f8fafc;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- 容器 --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* --- 头部 --- */
+.report-header {
+  text-align: center;
+  padding: 32px 16px 24px;
+  border-bottom: 3px solid var(--color-accent);
+  margin-bottom: 24px;
+}
+
+.report-header .week-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.report-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.report-header .date-range {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+/* --- 摘要卡片 --- */
+.summary-card {
+  background: var(--color-bg-light);
+  border-left: 4px solid var(--color-accent);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-bottom: 24px;
+}
+
+.summary-card .summary-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.summary-card p {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.summary-card .tag {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 2px 4px;
+  white-space: nowrap;
+}
+
+/* --- 区块标题 --- */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 28px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* --- 关键词标签 --- */
+.keyword-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.keyword-tag {
+  background: #f1f5f9;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+/* --- 数据表格 --- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.data-table thead th {
+  background: #f8fafc;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.data-table tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+
+.data-table tbody tr:hover { background: #fafbfc; }
+
+.data-table .rank-col { width: 48px; text-align: center; font-weight: 700; }
+.data-table .price-col { width: 80px; text-align: right; }
+.data-table .score-col { width: 80px; text-align: center; }
+.data-table .date-col { width: 90px; text-align: center; font-size: 12px; color: var(--color-text-secondary); }
+.data-table .type-col { width: 80px; text-align: center; }
+
+/* --- 评分星星 --- */
+.stars { color: #f59e0b; letter-spacing: 2px; }
+.stars-empty { color: #d1d5db; }
+
+/* --- 趋势箭头 --- */
+.trend-up { color: var(--color-success); font-weight: 700; }
+.trend-down { color: var(--color-danger); font-weight: 700; }
+.trend-flat { color: var(--color-neutral); }
+
+/* --- 统计卡片行 --- */
+.stats-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 120px;
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: var(--radius);
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+.stat-card .stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.stat-card .stat-label {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+/* --- 精选条目卡片 --- */
+.featured-list {
+  margin-bottom: 24px;
+}
+
+.featured-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+.featured-item .patent-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.featured-item .patent-meta {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+}
+
+.featured-item .patent-analysis {
+  font-size: 13px;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.featured-item .patent-tags {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge-invention { background: #dcfce7; color: #166534; }
+.badge-utility { background: #dbeafe; color: #1e40af; }
+.badge-design { background: #fef3c7; color: #92400e; }
+
+/* --- 重叠标记 --- */
+.overlap-badge {
+  display: inline-block;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+/* --- 趋势小图 --- */
+.trend-mini-chart {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--color-text-secondary);
+}
+
+/* --- 页脚 --- */
+.report-footer {
+  text-align: center;
+  padding: 24px 16px;
+  margin-top: 32px;
+  border-top: 1px solid var(--color-border);
+  font-size: 12px;
+  color: var(--color-neutral);
+}
+
+.report-footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.report-footer a:hover { text-decoration: underline; }
+
+/* --- 响应式 --- */
+@media (max-width: 600px) {
+  .container { padding: 16px 12px; }
+  .report-header h1 { font-size: 20px; }
+  .stats-row { flex-direction: column; }
+  .data-table { font-size: 12px; }
+  .data-table thead th,
+  .data-table tbody td { padding: 8px 6px; }
+}
