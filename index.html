@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Reports — 周报中心</title>
+<style>
+  :root {
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-stack);
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+  }
+  .container { max-width: 640px; margin: 0 auto; padding: 48px 16px; }
+  header { text-align: center; margin-bottom: 40px; }
+  header h1 { font-size: 28px; color: #1e293b; }
+  header p { color: #64748b; font-size: 14px; margin-top: 8px; }
+  .reports { display: flex; flex-direction: column; gap: 20px; }
+  .report-card {
+    display: block;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    transition: box-shadow 0.2s;
+  }
+  .report-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .report-card .icon { font-size: 32px; margin-bottom: 8px; }
+  .report-card h2 { font-size: 18px; margin-bottom: 4px; }
+  .report-card.patent h2 { color: #9a3412; }
+  .report-card.amazon h2 { color: #92400e; }
+  .report-card p { font-size: 13px; color: #64748b; }
+  .report-card .links { margin-top: 12px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .report-card .links a {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .btn-primary {
+    background: #1e293b;
+    color: #ffffff;
+  }
+  .btn-secondary {
+    background: #f1f5f9;
+    color: #475569;
+  }
+  footer { text-align: center; margin-top: 48px; font-size: 12px; color: #94a3b8; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📊 Weekly Reports</h1>
+    <p>每周自动生成 · 专利分析 & 亚马逊德国户外玩具趋势</p>
+  </header>
+
+  <div class="reports">
+    <!-- 专利周报 -->
+    <div class="report-card patent">
+      <div class="icon">📋</div>
+      <h2>专利周报</h2>
+      <p>中国公开专利分析 — 外贸玩具及可外贸销售产品相关</p>
+      <div class="links">
+        <a href="patents/reports/" class="btn-primary">📖 查看最新一期</a>
+        <a href="patents/archive/" class="btn-secondary">📂 历史归档</a>
+      </div>
+    </div>
+
+    <!-- Amazon DE 周报 -->
+    <div class="report-card amazon">
+      <div class="icon">🛒</div>
+      <h2>Amazon DE 周报</h2>
+      <p>德国亚马逊户外玩具/游戏 · 新品榜 & 热卖榜排名趋势</p>
+      <div class="links">
+        <a href="amazon-de/reports/" class="btn-primary">📖 查看最新一期</a>
+        <a href="amazon-de/archive/" class="btn-secondary">📂 历史归档</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>报告由 AI 辅助生成 · 每周六更新 · 数据来源：CNIPA / SooPAT / amazon.de</p>
+  </footer>
+</div>
+</body>
+</html>
