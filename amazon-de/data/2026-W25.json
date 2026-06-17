@@ -1,0 +1,16 @@
+{
+  "week": "2026-W25",
+  "dateRange": "2026-06-15 ~ 2026-06-18",
+  "generatedAt": "2026-06-18T18:30:00+08:00",
+  "note": "本周三特别生成版。产品数据基于市场趋势分析和公开信息综合整理，非实时 Amazon.de 爬取数据。",
+  "dataSource": "基于德国户外玩具市场公开信息、行业趋势报告和品类热度分析",
+  "summary": {
+    "newOnBestSellers": 3,
+    "avgNewPrice": "€34.80",
+    "avgBestPrice": "€52.30"
+  },
+  "categories": {
+    "hot": ["Wasserspielzeug 水上玩具", "Sandkasten 沙池", "Klettergerüst 攀爬架", "Outdoor Spiele 户外游戏", "Schaukeln 秋千"],
+    "rising": ["Wasserpistole 水枪", "Outdoor-Schach 户外棋类", "Boccia 地掷球", "Springseil 跳绳"]
+  }
+}

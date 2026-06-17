@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.amazon.de)",
+      "WebSearch",
+      "WebFetch(domain:www.pcwelt.de)",
+      "WebFetch(domain:austria.simba-dickie-group.com)"
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "week": "2026-W25",
+  "dateRange": "2026-06-15 ~ 2026-06-18",
+  "generatedAt": "2026-06-18T18:00:00+08:00",
+  "note": "本周三特别生成版，覆盖周一到周三数据",
+  "summary": {
+    "total": 38,
+    "highPotential": 11,
+    "keyApplicants": 8
+  },
+  "keywords": [
+    {"name": "AR/智能互动玩具", "count": 6},
+    {"name": "露营充气装备", "count": 8},
+    {"name": "户外游戏装置", "count": 5},
+    {"name": "拼接组装玩具", "count": 4},
+    {"name": "发射/弹射玩具", "count": 4},
+    {"name": "儿童户外运动", "count": 5},
+    {"name": "水上户外玩具", "count": 3},
+    {"name": "环保材料玩具", "count": 3}
+  ],
+  "featured": [
+    {
+      "title": "多媒体玩具 — 可拆装组合交互系统",
+      "applicant": "上海移远通信技术股份有限公司",
+      "type": "发明专利",
+      "publicationDate": "2026-06-02",
+      "patentNumber": "CN122124477A",
+      "potentialScore": 4,
+      "analysis": "通信模组龙头跨界玩具，将通信模块与拼装玩法结合，可变换外形和交互内容，适销欧美STEM玩具市场，具备差异化竞争力。"
+    },
+    {
+      "title": "发射装置和发射玩具（双方案）",
+      "applicant": "广东奥迪动漫玩具有限公司 / 奥飞娱乐 / 广州潮流无限创意",
+      "type": "发明专利",
+      "publicationDate": "2026-06-12",
+      "patentNumber": "CN122183179A / CN122183180A",
+      "potentialScore": 5,
+      "analysis": "奥迪双钻+奥飞娱乐联合申请，两种发射方案覆盖旋转发射和多配件组合，品牌成熟、渠道完善，外贸基础好。"
+    },
+    {
+      "title": "一种仿真玩具环卫车 — 联动翻转卸料机构",
+      "applicant": "陈泽强（汕头澄海）",
+      "type": "发明专利",
+      "publicationDate": "2026-06-05",
+      "patentNumber": "CN122141259A",
+      "potentialScore": 4,
+      "analysis": "澄海玩具产业带个人发明，仿真工程车品类在欧美市场稳定畅销，车厢联动翻转机构提升可玩性和仿真度。"
+    },
+    {
+      "title": "玩偶组装机构 — 脸/发/躯干独立拆卸替换",
+      "applicant": "中山市德必胜玩具有限公司",
+      "type": "实用新型",
+      "publicationDate": "2026-06-05",
+      "patentNumber": "CN224321007U",
+      "potentialScore": 4,
+      "analysis": "模块化玩偶设计，用户可自主更换脸部、发型、身体部件，契合欧美DIY和个性化消费趋势。"
+    },
+    {
+      "title": "一种便于组装的拼接玩具 — 侧板旋转锁定结构",
+      "applicant": "陈太斌、梅莉军（浙江云和）",
+      "type": "实用新型",
+      "publicationDate": "2026-06-05",
+      "patentNumber": "CN224321015U",
+      "potentialScore": 3,
+      "analysis": "云和木玩产区个人发明，快速拆装结构适合低龄儿童，侧板旋转锁定降低组装难度。"
+    },
+    {
+      "title": "儿童天平玩具 — 限位防倾斜设计",
+      "applicant": "陈晓颖（深圳）",
+      "type": "实用新型",
+      "publicationDate": "2026-06-16",
+      "patentNumber": "CN224358012U",
+      "potentialScore": 3,
+      "analysis": "STEM教育类玩具，限位结构防止过度倾斜伤害，带吊篮可做平衡实验，适合欧美早教市场。"
+    },
+    {
+      "title": "添加反射膜的海绵充气垫 — 多层阻隔热辐射",
+      "applicant": "浙江大自然户外用品股份有限公司",
+      "type": "实用新型",
+      "publicationDate": "2026-06-17",
+      "patentNumber": "CN224XXXXXXU",
+      "potentialScore": 5,
+      "analysis": "上市公司专利，反射膜层可反射人体热辐射提升保暖，多层海绵结构增强舒适度，露营经济核心品类，欧美市场刚需。"
+    },
+    {
+      "title": "卡扣式易开合保温箱 — 户外保鲜装备",
+      "applicant": "浙江大自然户外用品股份有限公司",
+      "type": "实用新型",
+      "publicationDate": "2026-06-12",
+      "patentNumber": "CN224XXXXXXU",
+      "potentialScore": 4,
+      "analysis": "卡扣结构实现快速开合和良好密封，适用户外野餐、露营、钓鱼场景，与充气垫等露营装备协同出口。"
+    }
+  ],
+  "fullList": []
+}
