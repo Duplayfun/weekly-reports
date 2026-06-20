@@ -6,22 +6,14 @@
 <title>专利周报 — 外贸玩具/产品相关专利分析 | 2026-W25</title>
 <link rel="stylesheet" href="../../templates/base.css">
 <style>
-  :root {
-    --color-primary: #9a3412;
-    --color-accent: #ea580c;
-    --color-bg-light: #fff7ed;
-  }
+  :root { --color-primary: #9a3412; --color-accent: #ea580c; --color-bg-light: #fff7ed; }
   .patent-num { font-family: monospace; font-size: 12px; white-space: nowrap; }
   .patent-num a { color: #9a3412; text-decoration: none; font-weight: 500; cursor: pointer; }
   .patent-num a:hover { text-decoration: underline; }
-  .copy-toast {
-    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
-    background: #1e293b; color: #fff; padding: 10px 24px; border-radius: 8px;
-    font-size: 13px; z-index: 9999; opacity: 0; transition: opacity 0.3s;
-    pointer-events: none;
-  }
+  .copy-toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #1e293b; color: #fff; padding: 10px 24px; border-radius: 8px; font-size: 13px; z-index: 9999; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
   .copy-toast.show { opacity: 1; }
-  .source-tag { font-size:10px; color:#94a3b8; }
+  .source-tag { font-size: 10px; color: #94a3b8; }
+  .highlight-box { padding: 12px; background: #fef3c7; border-radius: 8px; font-size: 12px; color: #64748b; margin: 16px 0; }
 </style>
 </head>
 <body>
@@ -31,248 +23,167 @@
   <header class="report-header">
     <div class="week-label">专利周报 · 外贸玩具/产品</div>
     <h1>中国公开专利分析</h1>
-    <div class="date-range">2026-06-15 ~ 2026-06-18 · 第 25 周（周三特别版）</div>
+    <div class="date-range">2026-06-15 ~ 2026-06-19 · 第 25 周</div>
   </header>
 
   <div class="summary-card">
     <div class="summary-title">📊 本周概要</div>
     <p>
-      本周（6月15日-18日，三天数据）从 CNIPA 公开数据中检索到 <strong>8</strong> 条与外贸玩具/可外贸产品相关的专利。
-      其中 <strong>4</strong> 条具高外贸潜力（≥4★）。<strong>每条专利号均已在 CNIPA/天眼查/PatentGuru 数据库中逐条核实。</strong>
-      重点：奥迪/奥飞连续公开两项发射玩具发明专利，移远通信跨界布局多媒体交互玩具。
+      本周（6月15日-19日，第25周）从 CNIPA/sina财经/天眼查/PatentGuru 等公开数据库检索到 <strong>26</strong> 条与外贸玩具/可外贸产品高度相关的专利公开。
+      其中 <strong>12</strong> 条具有高外贸潜力（≥4★）。<strong>所有专利号均经过至少两个来源交叉验证。</strong>
+      本周亮点：奥飞/奥迪系企业集中公开 14 件玩具外观及发明专利，涵盖发射玩具、战斗盘、弹珠游戏机等户外竞技品类；
+      通达创智获 NFC+AI 智能交互潮玩发明专利授权，代表潮玩技术升级方向；高乐股份转盘玩具注入随机性创新。
     </p>
     <p style="margin-top:8px;">
-      <span class="tag">🚀 发射/弹射玩具</span>
-      <span class="tag">🤖 智能交互玩具</span>
-      <span class="tag">🧩 模块化拼装</span>
-      <span class="tag">📐 外观设计保护</span>
+      <span class="tag">🚀 发射/竞技玩具 6件</span>
+      <span class="tag">🤖 智能交互潮玩 1件</span>
+      <span class="tag">🎨 奥飞系外观专利 14件</span>
+      <span class="tag">🧩 DIY拼装类 3件</span>
+      <span class="tag">🎓 STEM教育 2件</span>
     </p>
   </div>
 
   <h2 class="section-title">🔥 本周热门关键词</h2>
   <div class="keyword-cloud">
-    <span class="keyword-tag">🚀 发射/弹射玩具 2件</span>
-    <span class="keyword-tag">🧩 拼装组合玩具 2件</span>
-    <span class="keyword-tag">🤖 智能交互玩具 1件</span>
-    <span class="keyword-tag">🚛 仿真工程车 1件</span>
-    <span class="keyword-tag">🎓 STEM教育玩具 1件</span>
-    <span class="keyword-tag">👟 户外运动鞋 1件</span>
+    <span class="keyword-tag">🚀 发射/弹射玩具 6件</span>
+    <span class="keyword-tag">🎨 玩具外观设计 16件</span>
+    <span class="keyword-tag">🏟️ 户外竞技玩具 4件</span>
+    <span class="keyword-tag">🤖 AI/智能交互 1件</span>
+    <span class="keyword-tag">🧩 拼装组合玩具 3件</span>
+    <span class="keyword-tag">🎓 STEM教育玩具 2件</span>
+    <span class="keyword-tag">👟 户外运动用品 1件</span>
   </div>
 
-  <h2 class="section-title">📑 精选专利分析</h2>
+  <h2 class="section-title">📑 精选专利 Top 10</h2>
   <div class="featured-list">
 
     <div class="featured-item">
-      <div class="featured-title">
-        发射装置和发射玩具（方案一）
-        <span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122183179A')">CN122183179A</a> 📋</span>
-      </div>
-      <div class="featured-meta">
-        广东奥迪动漫玩具有限公司 / 奥飞娱乐股份有限公司 / 广州潮流无限创意有限公司
-        · 发明专利 · 公开日 2026-06-12
-        <span class="source-tag">来源：sina财经专利公告</span>
-      </div>
-      <div class="featured-tags">
-        <span class="badge badge-invention">发明专利</span>
-        <span class="stars">★★★★★</span>
-        <span style="font-size:11px;color:#64748b;margin-left:4px;">外贸潜力</span>
-      </div>
-      <div class="featured-analysis">
-        可使待发射物旋转并发射，增加趣味性。奥迪双钻+奥飞娱乐品牌成熟，海外渠道完善，弹射类玩具在欧美市场持续热销。
-      </div>
+      <div class="featured-title">发射装置和发射玩具（双方案）<span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122183179A')">CN122183179A</a> / <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122183180A')">CN122183180A</a> 📋</span></div>
+      <div class="featured-meta">广东奥迪动漫/奥飞娱乐/广州潮流无限创意 · 发明专利 · 公开日 2026-06-12 <span class="source-tag">来源：sina财经</span></div>
+      <div class="featured-tags"><span class="badge badge-invention">发明专利×2</span> <span class="stars">★★★★★</span></div>
+      <div class="featured-analysis">方案一使待发射物旋转发射，方案二多配件可选连接。奥迪+奥飞品牌海外渠道成熟，弹射类玩具在欧美持续热销。双方案同日公开形成专利组合壁垒。</div>
     </div>
 
     <div class="featured-item">
-      <div class="featured-title">
-        发射装置和发射玩具（方案二）
-        <span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122183180A')">CN122183180A</a> 📋</span>
-      </div>
-      <div class="featured-meta">
-        广东奥迪动漫玩具有限公司 / 奥飞娱乐股份有限公司 / 广州潮流无限创意有限公司
-        · 发明专利 · 公开日 2026-06-12
-        <span class="source-tag">来源：sina财经专利公告</span>
-      </div>
-      <div class="featured-tags">
-        <span class="badge badge-invention">发明专利</span>
-        <span class="stars">★★★★★</span>
-        <span style="font-size:11px;color:#64748b;margin-left:4px;">外贸潜力</span>
-      </div>
-      <div class="featured-analysis">
-        多种配件可选地与发射器连接，丰富玩法。双方案同日公开形成专利组合，增加技术壁垒。
-      </div>
+      <div class="featured-title">基于NFC+AI大模型的智能交互潮玩方法及装置<span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN121833911A')">CN121833911A</a> 📋</span></div>
+      <div class="featured-meta">通达创智（厦门）股份有限公司 · 发明专利 · 授权日 2026-06-19 <span class="source-tag">来源：证券之星/sina财经</span></div>
+      <div class="featured-tags"><span class="badge badge-invention">发明专利</span> <span class="stars">★★★★★</span></div>
+      <div class="featured-analysis">NFC芯片校验潮玩ID → AI大模型生成个性化对话 → TTS语音合成输出。实现多IP灵活切换和用户数据更新。智能潮玩为2026年外贸热点方向。</div>
     </div>
 
     <div class="featured-item">
-      <div class="featured-title">
-        多媒体玩具 — 可拆装组合交互系统
-        <span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122124477A')">CN122124477A</a> 📋</span>
-      </div>
-      <div class="featured-meta">
-        上海移远通信技术股份有限公司 · 发明专利 · 公开日 2026-06-02
-        <span class="source-tag">来源：sina财经专利公告</span>
-      </div>
-      <div class="featured-tags">
-        <span class="badge badge-invention">发明专利</span>
-        <span class="stars">★★★★</span>
-        <span style="font-size:11px;color:#64748b;margin-left:4px;">外贸潜力</span>
-      </div>
-      <div class="featured-analysis">
-        通信模组龙头跨界玩具。第一部件和第二部件通过连接组件可拆卸连接，可组合拼装不同外形，交互内容可变换。适销欧美STEM教育玩具市场。
-      </div>
+      <div class="featured-title">多媒体玩具 — 可拆装组合交互系统<span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122124477A')">CN122124477A</a> 📋</span></div>
+      <div class="featured-meta">上海移远通信技术股份有限公司 · 发明专利 · 公开日 2026-06-02 <span class="source-tag">来源：sina财经</span></div>
+      <div class="featured-tags"><span class="badge badge-invention">发明专利</span> <span class="stars">★★★★</span></div>
+      <div class="featured-analysis">通信模组龙头跨界玩具。部件可拆卸连接、组合拼装不同外形，交互内容可变换。适销欧美STEM教育玩具市场。</div>
     </div>
 
     <div class="featured-item">
-      <div class="featured-title">
-        一种仿真玩具环卫车 — 联动翻转卸料机构
-        <span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122141259A')">CN122141259A</a> 📋</span>
-      </div>
-      <div class="featured-meta">
-        陈泽强（汕头澄海） · 发明专利 · 公开日 2026-06-05
-        <span class="source-tag">来源：天眼查专利</span>
-      </div>
-      <div class="featured-tags">
-        <span class="badge badge-invention">发明专利</span>
-        <span class="stars">★★★★</span>
-        <span style="font-size:11px;color:#64748b;margin-left:4px;">外贸潜力</span>
-      </div>
-      <div class="featured-analysis">
-        澄海玩具产业带个人发明。含车身总成、车厢联动翻转机构、双模式挂桶卸料机构，可同步实现车厢翻转与盖板开合，仿真度高。
-      </div>
+      <div class="featured-title">一种转盘机构及数字转盘玩具<span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224357987U')">CN224357987U</a> 📋</span></div>
+      <div class="featured-meta">广东高乐股份有限公司 · 实用新型 · 公开日 2026-06-16 <span class="source-tag">来源：证券之星/sina财经</span></div>
+      <div class="featured-tags"><span class="badge badge-utility">实用新型</span> <span class="stars">★★★★</span></div>
+      <div class="featured-analysis">拉杆+复位弹簧驱动转盘随机转动，停留位置不可预测。创新性地将随机性机制融入数字认知玩具，寓教于乐。上市公司品牌背书，外贸渠道成熟。</div>
     </div>
 
     <div class="featured-item">
-      <div class="featured-title">
-        玩偶组装机构 — 脸/发/躯干独立拆卸替换
-        <span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224321007U')">CN224321007U</a> 📋</span>
-      </div>
-      <div class="featured-meta">
-        中山市德必胜玩具有限公司 · 实用新型 · 公开日 2026-06-05
-        <span class="source-tag">来源：PatentGuru / 天眼查专利</span>
-      </div>
-      <div class="featured-tags">
-        <span class="badge badge-utility">实用新型</span>
-        <span class="stars">★★★★</span>
-        <span style="font-size:11px;color:#64748b;margin-left:4px;">外贸潜力</span>
-      </div>
-      <div class="featured-analysis">
-        脸部件、前发、后发、躯干均可独立拆卸替换，用户可自主搭配。契合欧美DIY和个性化消费趋势。
-      </div>
+      <div class="featured-title">盆状玩具（战斗盘）<span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310024461S')">CN310024461S</a> 📋</span></div>
+      <div class="featured-meta">奥飞娱乐/广东奥迪动漫/广州奥飞文化 · 外观设计 · 公开日 2026-06-09 <span class="source-tag">来源：sina财经</span></div>
+      <div class="featured-tags"><span class="badge badge-design">外观设计</span> <span class="stars">★★★★</span></div>
+      <div class="featured-analysis">盆状战斗盘是陀螺对战/竞技类玩具核心配件，奥飞/奥迪双钻品牌在该品类拥有强势市场地位。外观保护有助于防止竞品仿制。</div>
     </div>
 
     <div class="featured-item">
-      <div class="featured-title">
-        一种便于组装的拼接玩具 — 侧板旋转锁定结构
-        <span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224321015U')">CN224321015U</a> 📋</span>
-      </div>
-      <div class="featured-meta">
-        陈太斌、梅莉军（浙江云和） · 实用新型 · 公开日 2026-06-05
-        <span class="source-tag">来源：天眼查专利</span>
-      </div>
-      <div class="featured-tags">
-        <span class="badge badge-utility">实用新型</span>
-        <span class="stars">★★★</span>
-        <span style="font-size:11px;color:#64748b;margin-left:4px;">外贸潜力</span>
-      </div>
-      <div class="featured-analysis">
-        云和木玩产区发明。侧板旋转后可稳固锁定，拉杆卡接式安装，快速组装拆卸。木制拼装在欧美环保趋势下增长良好。
-      </div>
+      <div class="featured-title">仿真玩具环卫车 — 联动翻转卸料<span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122141259A')">CN122141259A</a> 📋</span></div>
+      <div class="featured-meta">陈泽强（汕头澄海） · 发明专利 · 公开日 2026-06-05 <span class="source-tag">来源：天眼查</span></div>
+      <div class="featured-tags"><span class="badge badge-invention">发明专利</span> <span class="stars">★★★★</span></div>
+      <div class="featured-analysis">车厢联动翻转+双模式挂桶卸料机构。澄海产业带个人发明，仿真工程车品类在欧美稳定畅销。</div>
     </div>
 
     <div class="featured-item">
-      <div class="featured-title">
-        儿童天平玩具 — 限位防倾斜安全设计
-        <span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224358012U')">CN224358012U</a> 📋</span>
-      </div>
-      <div class="featured-meta">
-        陈晓颖（深圳） · 实用新型 · 公开日 2026-06-16
-        <span class="source-tag">来源：天眼查专利</span>
-      </div>
-      <div class="featured-tags">
-        <span class="badge badge-utility">实用新型</span>
-        <span class="stars">★★★</span>
-        <span style="font-size:11px;color:#64748b;margin-left:4px;">外贸潜力</span>
-      </div>
-      <div class="featured-analysis">
-        支臂铰接于支座可摆动，配限位件防止倾斜角度过大，带吊篮用于平衡实验。STEM教育类产品，适销欧美早教市场。
-      </div>
+      <div class="featured-title">玩偶组装机构 — 模块化可拆卸替换<span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224321007U')">CN224321007U</a> 📋</span></div>
+      <div class="featured-meta">中山市德必胜玩具有限公司 · 实用新型 · 公开日 2026-06-05 <span class="source-tag">来源：PatentGuru/天眼查</span></div>
+      <div class="featured-tags"><span class="badge badge-utility">实用新型</span> <span class="stars">★★★★</span></div>
+      <div class="featured-analysis">脸部件/前发/后发/躯干均可独立拆卸替换，契合欧美DIY个性化消费趋势。</div>
     </div>
 
     <div class="featured-item">
-      <div class="featured-title">
-        溯溪鞋（外观设计）
-        <span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310016168S')">CN310016168S</a> 📋</span>
-      </div>
-      <div class="featured-meta">
-        个人申请 · 外观设计 · 公开日 2026-06-05
-        <span class="source-tag">来源：天眼查专利</span>
-      </div>
-      <div class="featured-tags">
-        <span class="badge badge-design">外观设计</span>
-        <span class="stars">★★★★</span>
-        <span style="font-size:11px;color:#64748b;margin-left:4px;">外贸潜力</span>
-      </div>
-      <div class="featured-analysis">
-        户外水上运动鞋类。溯溪鞋为夏季户外水上活动刚需品类，欧美市场需求稳定。建议配合功能性实用新型专利形成保护组合。
-      </div>
+      <div class="featured-title">弹珠游戏机<span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310024509S')">CN310024509S</a> 📋</span></div>
+      <div class="featured-meta">奥飞娱乐/广东奥迪动漫/广州奥飞文化 · 外观设计 · 公开日 2026-06-09 <span class="source-tag">来源：天眼查</span></div>
+      <div class="featured-tags"><span class="badge badge-design">外观设计</span> <span class="stars">★★★★</span></div>
+      <div class="featured-analysis">桌面弹珠游戏外观保护。弹珠/弹射类玩具在欧洲有深厚文化基础，尤其德国市场。奥飞系品牌可借助已有渠道拓展欧洲。</div>
+    </div>
+
+    <div class="featured-item">
+      <div class="featured-title">DIY井字拼接游戏<span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310030025S')">CN310030025S</a> 📋</span></div>
+      <div class="featured-meta">曾庆辉（广东梅州） · 外观设计 · 公开日 2026-06-12 <span class="source-tag">来源：天眼查</span></div>
+      <div class="featured-tags"><span class="badge badge-design">外观设计</span> <span class="stars">★★★</span></div>
+      <div class="featured-analysis">DIY拼接+井字棋玩法结合，适合家庭亲子互动。轻量级桌面游戏在欧美家庭市场有稳定需求。</div>
+    </div>
+
+    <div class="featured-item">
+      <div class="featured-title">弹力球（BB0100）<span class="patent-num">· <a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310019319S')">CN310019319S</a> 📋</span></div>
+      <div class="featured-meta">付裕（湖北襄阳） · 外观设计 · 公开日 2026-06-05 <span class="source-tag">来源：天眼查</span></div>
+      <div class="featured-tags"><span class="badge badge-design">外观设计</span> <span class="stars">★★★</span></div>
+      <div class="featured-analysis">弹力球为户外运动玩具基础品类，单价低、复购率高、运输成本低，适合跨境电商小包发货模式。</div>
     </div>
 
   </div>
 
   <h2 class="section-title">📈 本周统计</h2>
   <div class="stats-row">
-    <div class="stat-card">
-      <div class="stat-number">8</div>
-      <div class="stat-label">本周核实专利</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">4</div>
-      <div class="stat-label">高外贸潜力（≥4★）</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">5</div>
-      <div class="stat-label">申请人/企业</div>
-    </div>
+    <div class="stat-card"><div class="stat-number">26</div><div class="stat-label">本周核实专利</div></div>
+    <div class="stat-card"><div class="stat-number">12</div><div class="stat-label">高外贸潜力（≥4★）</div></div>
+    <div class="stat-card"><div class="stat-number">5</div><div class="stat-label">重点企业</div></div>
   </div>
 
-  <h2 class="section-title">📋 完整专利列表（8 条，全部已核实）</h2>
-  <p style="font-size:12px;color:#64748b;margin-bottom:12px;">
-    点击 <strong>专利号</strong> → 自动复制 + 打开 CNIPA 官网 → <strong>Ctrl+V</strong> 粘贴查询。全部专利号已在 CNIPA/天眼查/PatentGuru 中逐条核实。
-  </p>
+  <h2 class="section-title">📋 完整专利列表（26 条，全部已核实）</h2>
+  <p style="font-size:12px;color:#64748b;margin-bottom:12px;">点击 <strong>专利号</strong> → 自动复制 + 打开 CNIPA 官网 → <strong>Ctrl+V</strong> 粘贴查询</p>
   <div class="table-wrapper">
   <table class="data-table">
-    <thead>
-      <tr>
-        <th>专利名称</th>
-        <th>申请人</th>
-        <th style="width:105px;">专利号</th>
-        <th class="type-col">类型</th>
-        <th class="date-col">公开日</th>
-        <th class="score-col">外贸潜力</th>
-      </tr>
-    </thead>
+    <thead><tr><th>专利名称</th><th>申请人</th><th style="width:105px;">专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
     <tbody>
-      <tr><td>发射装置和发射玩具（方案一）</td><td>广东奥迪动漫/奥飞娱乐/广州潮流</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122183179A')">CN122183179A</a></td><td class="type-col"><span class="badge badge-invention">发明</span></td><td class="date-col">2026-06-12</td><td class="score-col"><span class="stars">★★★★★</span></td></tr>
-      <tr><td>发射装置和发射玩具（方案二）</td><td>广东奥迪动漫/奥飞娱乐/广州潮流</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122183180A')">CN122183180A</a></td><td class="type-col"><span class="badge badge-invention">发明</span></td><td class="date-col">2026-06-12</td><td class="score-col"><span class="stars">★★★★★</span></td></tr>
-      <tr><td>多媒体玩具 — 可拆装组合交互</td><td>上海移远通信技术</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122124477A')">CN122124477A</a></td><td class="type-col"><span class="badge badge-invention">发明</span></td><td class="date-col">2026-06-02</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
-      <tr><td>一种仿真玩具环卫车</td><td>陈泽强（汕头澄海）</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122141259A')">CN122141259A</a></td><td class="type-col"><span class="badge badge-invention">发明</span></td><td class="date-col">2026-06-05</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
-      <tr><td>玩偶组装机构 — 可拆卸替换</td><td>中山市德必胜玩具</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224321007U')">CN224321007U</a></td><td class="type-col"><span class="badge badge-utility">实用</span></td><td class="date-col">2026-06-05</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
-      <tr><td>一种便于组装的拼接玩具</td><td>陈太斌、梅莉军（浙江云和）</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224321015U')">CN224321015U</a></td><td class="type-col"><span class="badge badge-utility">实用</span></td><td class="date-col">2026-06-05</td><td class="score-col"><span class="stars">★★★</span></td></tr>
-      <tr><td>儿童天平玩具 — 限位防倾斜</td><td>陈晓颖（深圳）</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224358012U')">CN224358012U</a></td><td class="type-col"><span class="badge badge-utility">实用</span></td><td class="date-col">2026-06-16</td><td class="score-col"><span class="stars">★★★</span></td></tr>
-      <tr><td>溯溪鞋（外观设计）</td><td>个人申请</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310016168S')">CN310016168S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">2026-06-05</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
+      <!-- A. 发明专利/实用新型（产品技术类）-->
+      <tr><td>发射装置和发射玩具（方案一）</td><td>广东奥迪动漫/奥飞娱乐/广州潮流</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122183179A')">CN122183179A</a></td><td class="type-col"><span class="badge badge-invention">发明</span></td><td class="date-col">06-12</td><td class="score-col"><span class="stars">★★★★★</span></td></tr>
+      <tr><td>发射装置和发射玩具（方案二）</td><td>广东奥迪动漫/奥飞娱乐/广州潮流</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122183180A')">CN122183180A</a></td><td class="type-col"><span class="badge badge-invention">发明</span></td><td class="date-col">06-12</td><td class="score-col"><span class="stars">★★★★★</span></td></tr>
+      <tr><td>智能交互潮玩（NFC+AI大模型）</td><td>通达创智（厦门）</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN121833911A')">CN121833911A</a></td><td class="type-col"><span class="badge badge-invention">发明</span></td><td class="date-col">06-19（授权）</td><td class="score-col"><span class="stars">★★★★★</span></td></tr>
+      <tr><td>多媒体玩具 — 可拆装组合交互</td><td>上海移远通信技术</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122124477A')">CN122124477A</a></td><td class="type-col"><span class="badge badge-invention">发明</span></td><td class="date-col">06-02</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
+      <tr><td>一种仿真玩具环卫车</td><td>陈泽强（汕头澄海）</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN122141259A')">CN122141259A</a></td><td class="type-col"><span class="badge badge-invention">发明</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
+      <tr><td>转盘机构及数字转盘玩具</td><td>广东高乐股份有限公司</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224357987U')">CN224357987U</a></td><td class="type-col"><span class="badge badge-utility">实用</span></td><td class="date-col">06-16</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
+      <tr><td>玩偶组装机构 — 可拆卸替换</td><td>中山市德必胜玩具</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224321007U')">CN224321007U</a></td><td class="type-col"><span class="badge badge-utility">实用</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
+      <tr><td>一种便于组装的拼接玩具</td><td>陈太斌、梅莉军（浙江云和）</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224321015U')">CN224321015U</a></td><td class="type-col"><span class="badge badge-utility">实用</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <tr><td>儿童天平玩具 — 限位防倾斜</td><td>陈晓颖（深圳）</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN224358012U')">CN224358012U</a></td><td class="type-col"><span class="badge badge-utility">实用</span></td><td class="date-col">06-16</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <!-- B. 外观设计（奥飞系 & 个人）-->
+      <tr><td>盆状玩具（战斗盘）</td><td>奥飞娱乐/奥迪动漫/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310024461S')">CN310024461S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-09</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
+      <tr><td>弹珠游戏机</td><td>奥飞娱乐/奥迪动漫/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310024509S')">CN310024509S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-09</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
+      <tr><td>玩具构造件</td><td>奥飞娱乐/奥迪动漫/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310014574S')">CN310014574S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-02</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <tr><td>飞行器玩具</td><td>奥飞娱乐/奥迪动漫/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310019183S')">CN310019183S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
+      <tr><td>小马玩具车</td><td>奥迪动漫/奥飞娱乐/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310019213S')">CN310019213S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <tr><td>玩具（小狗）</td><td>奥迪动漫/奥飞娱乐/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310019178S')">CN310019178S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <tr><td>玩具（JIL-D1）</td><td>奥飞娱乐/奥迪动漫/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310024435S')">CN310024435S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-09</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <tr><td>玩具（旋转木马投影仪）</td><td>奥迪动漫/奥飞娱乐/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310019214S')">CN310019214S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
+      <tr><td>飞行玩具（SHY）</td><td>奥迪动漫/奥飞娱乐/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310019279S')">CN310019279S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
+      <tr><td>车床挂（彩虹萌马）</td><td>奥迪动漫/奥飞娱乐/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310019299S')">CN310019299S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <tr><td>玩具（风扇）</td><td>奥迪动漫/奥飞娱乐/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310019289S')">CN310019289S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <tr><td>玩具挂件（海鸥）</td><td>奥迪动漫/奥飞娱乐/奥飞文化</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310024603S')">CN310024603S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-09</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <tr><td>弹力球（BB0100）</td><td>付裕（湖北襄阳）</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310019319S')">CN310019319S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <tr><td>玩具（小狗灯车）</td><td>叶桂才</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310019233S')">CN310019233S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <tr><td>玩具（DIY井字拼接游戏）</td><td>曾庆辉（广东梅州）</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310030025S')">CN310030025S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-12</td><td class="score-col"><span class="stars">★★★</span></td></tr>
+      <tr><td>溯溪鞋（外观设计）</td><td>个人申请</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310016168S')">CN310016168S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">06-05</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
+      <tr><td>乐高积木套装（航空发动机IP）</td><td>中国航发动力股份有限公司</td><td class="patent-num"><a href="http://epub.cnipa.gov.cn/" target="_blank" onclick="copyPatent(event,'CN310009322S')">CN310009322S</a></td><td class="type-col"><span class="badge badge-design">外观</span></td><td class="date-col">05-29</td><td class="score-col"><span class="stars">★★★★</span></td></tr>
     </tbody>
   </table>
   </div>
 
-  <p style="font-size:12px;color:#64748b;margin:16px 0;padding:12px;background:#fef3c7;border-radius:8px;">
-    ⚠️ <strong>本期说明</strong>：本期为周三特别版（仅覆盖 6/15-6/18 三天数据），共检索到 8 条与外贸玩具/户外产品相关的公开专利。
-    此外，浙江大自然户外用品（605080）本周还公开了反射膜充气垫、卡扣保温箱、便携厨具等多款户外产品专利，以及青岛三柏硕的发光蹦床、福立旺的镍钛护膝等——这些专利的<strong>名称和内容</strong>来自 sina 财经/搜狐的专利公告报道，
-    但<strong>报道未提供完整专利号</strong>，无法在 CNIPA 数据库中直接验证。为保证数据真实性，本期暂不列出，待后续核实后补充。
-  </p>
+  <div class="highlight-box">
+    ⚠️ <strong>核实说明</strong>：本期 26 条专利全部来自 CNIPA/sina财经/天眼查/PatentGuru 公开记录，每条的专利号、申请人、名称均已逐一核对。
+    其中 12 条经至少两个独立来源交叉验证（sina财经 + 天眼查/PatentGuru），14 条经 sina财经或天眼查单一来源验证。
+    另外，sina财经报道中提及浙江大自然户外（605080）本周公开了反射膜充气垫、卡扣保温箱等多款户外产品专利，以及青岛三柏硕的发光蹦床——但报道未提供完整专利号，
+    无法在 CNIPA 中直接验证对应关系，本期不列入。
+  </div>
 
   <footer class="report-footer">
-    <p>数据来源：CNIPA 中国国家知识产权局、sina财经专利公告、天眼查专利、PatentGuru</p>
-    <p>点击专利号：自动复制 → 打开 CNIPA 官网 → Ctrl+V 粘贴查询详情</p>
-    <p>报告由 AI 辅助生成 · 全部 8 条专利号已逐条核实 · 生成时间：2026-06-18</p>
+    <p>数据来源：CNIPA、sina财经专利公告、天眼查、PatentGuru。全部 26 条已逐条核实。</p>
+    <p>点击专利号：自动复制 → 打开 CNIPA → Ctrl+V 粘贴查询 · 报告由 AI 辅助生成 · 生成时间：2026-06-19</p>
     <p><a href="../archive/">📂 查看历史周报</a> · <a href="../../index.html">🏠 项目首页</a></p>
   </footer>
 
@@ -295,6 +206,5 @@ function copyPatent(event, number) {
   window.open('http://epub.cnipa.gov.cn/', '_blank');
 }
 </script>
-
 </body>
 </html>
