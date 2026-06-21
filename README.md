@@ -24,4 +24,4 @@
 
 ## 在线查看
 
-部署后访问：`https://<username>.github.io/weekly-reports/`
+部署后访问：`https://duplayfun.github.io/weekly-reports/`
