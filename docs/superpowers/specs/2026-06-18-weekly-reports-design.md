@@ -159,7 +159,20 @@ weekly-reports/
 5. **更新归档索引**：在 `archive/index.html` 中添加本期链接
 6. **部署（可选）**：git commit + push → GitHub Actions → GitHub Pages
 
-### 8.2 数据格式
+### 8.2 输出格式
+
+每期周报生成两种格式：
+
+- **HTML**：`reports/{年份}-W{周数}.html` — 浏览器直接查看，链接可交互
+- **PDF**：`reports/{年份}-W{周数}.pdf` — 方便邮件附件发送和打印，通过 Edge 无头模式转换
+
+PDF 转换命令（Windows）：
+```bash
+EDGE="C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
+"$EDGE" --headless --disable-gpu --print-to-pdf="<绝对路径>.pdf" --no-pdf-header-footer "file:///<绝对路径>.html"
+```
+
+### 8.3 数据格式
 
 ```json
 // patents/data/2026-W25.json

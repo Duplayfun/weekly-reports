@@ -24,7 +24,13 @@
 2. **第一遍核实**：将每条数据在原始来源中交叉验证
 3. **第二遍核实**：随机抽查至少 30% 的数据，确认内容与来源一致
 4. 剔除无法核实的数据
-5. 生成报告时标注数据来源
+5. 生成 HTML 报告（`reports/{年份}-W{周数}.html`）
+6. 同步生成 PDF 版本（`reports/{年份}-W{周数}.pdf`），使用以下命令：
+   ```bash
+   EDGE="C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
+   "$EDGE" --headless --disable-gpu --print-to-pdf="<报告绝对路径>.pdf" --no-pdf-header-footer "file:///<报告绝对路径>.html"
+   ```
+7. 更新归档索引（`archive/index.html`）
 
 ### 数据标注
 
