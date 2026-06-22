@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>专利周报 — 外贸玩具/产品相关专利分析 | [[WEEK_LABEL]]</title>
+<title>专利周报 — 外贸玩具/产品专利分析 | [[WEEK_LABEL]]</title>
 <link rel="stylesheet" href="../templates/base.css">
 <style>
   :root {
@@ -11,84 +11,103 @@
     --color-accent: #ea580c;
     --color-bg-light: #fff7ed;
   }
+  .patent-num { font-family: monospace; font-size: 12px; white-space: nowrap; }
+  .patent-num a { color: #9a3412; text-decoration: none; font-weight: 500; cursor: pointer; }
+  .patent-num a:hover { text-decoration: underline; }
+  .copy-toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #1e293b; color: #fff; padding: 10px 24px; border-radius: 8px; font-size: 13px; z-index: 9999; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+  .copy-toast.show { opacity: 1; }
+  .region-badge { display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; margin-right: 6px; }
+  .region-us { background: #dbeafe; color: #1e40af; }
+  .region-ep { background: #f3e8ff; color: #7c3aed; }
+  .region-cn { background: #fff7ed; color: #9a3412; }
 </style>
 </head>
 <body>
+<div class="copy-toast" id="toast"></div>
 <div class="container">
 
-  <!-- ===== 头部 ===== -->
   <header class="report-header">
     <div class="week-label">专利周报 · 外贸玩具/产品</div>
-    <h1>中国公开专利分析</h1>
+    <h1>美国 · 欧洲 · 中国 公开专利分析</h1>
     <div class="date-range">[[DATE_RANGE]] · 第 [[WEEK_NUM]] 周</div>
   </header>
 
-  <!-- ===== 本周概要 ===== -->
   <div class="summary-card">
     <div class="summary-title">📊 本周概要</div>
-    <p>
-      [[SUMMARY_TEXT]]
-    </p>
-    <p style="margin-top:8px;">
-      [[SUMMARY_TAGS]]
-    </p>
+    <p>[[SUMMARY_TEXT]]</p>
+    <p style="margin-top:8px;">[[SUMMARY_TAGS]]</p>
   </div>
 
-  <!-- ===== 热门关键词 ===== -->
   <h2 class="section-title">🔥 本周热门关键词</h2>
-  <div class="keyword-cloud">
-    [[KEYWORD_TAGS]]
-  </div>
+  <div class="keyword-cloud">[[KEYWORD_TAGS]]</div>
 
-  <!-- ===== 精选专利 ===== -->
-  <h2 class="section-title">📑 精选专利 — 高外贸潜力 Top 8</h2>
-  <div class="featured-list">
-    [[FEATURED_PATENTS]]
-  </div>
+  <!-- ===== 第一部分：美国专利 ===== -->
+  <h2 class="section-title">🇺🇸 美国公开专利 — 精选高外贸潜力</h2>
+  <p style="font-size:12px;color:#64748b;margin-bottom:8px;">数据来源：USPTO / Google Patents</p>
+  <div class="featured-list">[[US_FEATURED_PATENTS]]</div>
 
-  <!-- ===== 统计卡片 ===== -->
-  <h2 class="section-title">📈 本周统计</h2>
-  <div class="stats-row">
-    <div class="stat-card">
-      <div class="stat-number">[[TOTAL_COUNT]]</div>
-      <div class="stat-label">本周相关专利</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">[[HIGH_POTENTIAL_COUNT]]</div>
-      <div class="stat-label">高外贸潜力（≥4★）</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">[[KEY_APPLICANTS_COUNT]]</div>
-      <div class="stat-label">重点申请人</div>
-    </div>
-  </div>
-
-  <!-- ===== 完整列表 ===== -->
-  <h2 class="section-title">📋 完整专利列表（[[TOTAL_COUNT]] 条）</h2>
+  <h3 style="font-size:14px;margin:16px 0 8px;">美国完整列表</h3>
   <div class="table-wrapper">
   <table class="data-table">
-    <thead>
-      <tr>
-        <th>专利名称</th>
-        <th>申请人</th>
-        <th class="type-col">类型</th>
-        <th class="date-col">公开日</th>
-        <th class="score-col">外贸潜力</th>
-      </tr>
-    </thead>
-    <tbody>
-      [[FULL_LIST_ROWS]]
-    </tbody>
+    <thead><tr><th>专利名称</th><th>申请人</th><th style="width:105px;">专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
+    <tbody>[[US_FULL_LIST]]</tbody>
   </table>
   </div>
 
-  <!-- ===== 页脚 ===== -->
+  <!-- ===== 第二部分：欧洲专利 ===== -->
+  <h2 class="section-title">🇪🇺 欧洲公开专利 — 精选高外贸潜力</h2>
+  <p style="font-size:12px;color:#64748b;margin-bottom:8px;">数据来源：EPO Espacenet / Google Patents</p>
+  <div class="featured-list">[[EP_FEATURED_PATENTS]]</div>
+
+  <h3 style="font-size:14px;margin:16px 0 8px;">欧洲完整列表</h3>
+  <div class="table-wrapper">
+  <table class="data-table">
+    <thead><tr><th>专利名称</th><th>申请人</th><th style="width:105px;">专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
+    <tbody>[[EP_FULL_LIST]]</tbody>
+  </table>
+  </div>
+
+  <!-- ===== 第三部分：中国专利 ===== -->
+  <h2 class="section-title">🇨🇳 中国公开专利 — 精选高外贸潜力</h2>
+  <p style="font-size:12px;color:#64748b;margin-bottom:8px;">数据来源：CNIPA / SooPAT / 天眼查 / PatentGuru</p>
+  <div class="featured-list">[[CN_FEATURED_PATENTS]]</div>
+
+  <h3 style="font-size:14px;margin:16px 0 8px;">中国完整列表</h3>
+  <div class="table-wrapper">
+  <table class="data-table">
+    <thead><tr><th>专利名称</th><th>申请人</th><th style="width:105px;">专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
+    <tbody>[[CN_FULL_LIST]]</tbody>
+  </table>
+  </div>
+
+  <!-- ===== 统计 ===== -->
+  <h2 class="section-title">📈 本周统计</h2>
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-number">[[TOTAL_COUNT]]</div><div class="stat-label">三区相关专利</div></div>
+    <div class="stat-card"><div class="stat-number">[[HIGH_POTENTIAL_COUNT]]</div><div class="stat-label">高外贸潜力（≥4★）</div></div>
+    <div class="stat-card"><div class="stat-number">[[US_COUNT]]</div><div class="stat-label">🇺🇸 美国</div></div>
+    <div class="stat-card"><div class="stat-number">[[EP_COUNT]]</div><div class="stat-label">🇪🇺 欧洲</div></div>
+    <div class="stat-card"><div class="stat-number">[[CN_COUNT]]</div><div class="stat-label">🇨🇳 中国</div></div>
+  </div>
+
   <footer class="report-footer">
-    <p>数据来源：CNIPA 中国国家知识产权局、SooPAT、智慧芽等公开数据库</p>
+    <p>数据来源：USPTO / EPO Espacenet / CNIPA / Google Patents / SooPAT / 天眼查</p>
     <p>报告由 AI 辅助生成 · 生成时间：[[GENERATED_AT]]</p>
-    <p><a href="archive/">📂 查看历史周报</a> · <a href="../index.html">🏠 项目首页</a></p>
+    <p><a href="../archive/">📂 查看历史周报</a> · <a href="../../index.html">🏠 项目首页</a></p>
   </footer>
 
 </div>
+<script>
+function copyPatent(event, number) {
+  event.preventDefault();
+  navigator.clipboard.writeText(number).then(function() {
+    var toast = document.getElementById('toast');
+    toast.textContent = '✅ 已复制 ' + number;
+    toast.className = 'copy-toast show';
+    setTimeout(function() { toast.className = 'copy-toast'; }, 2000);
+  });
+  window.open('http://epub.cnipa.gov.cn/', '_blank');
+}
+</script>
 </body>
 </html>
