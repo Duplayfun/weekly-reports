@@ -8,7 +8,7 @@
 在本地 `weekly-reports` 项目中生成两份独立的 HTML 周报：
 
 1. **专利周报**（`patents/`）：中国最近一周公开的、与外贸玩具或可外贸销售产品相关的专利分析
-2. **Amazon DE 周报**（`amazon-de/`）：德国亚马逊户外玩具、户外游戏等品类的新品榜和热卖榜排名趋势分析
+2. **Amazon 美欧周报**（`amazon/`）：亚马逊美国+欧洲（.com / .de / .co.uk / .fr / .it / .es）户外玩具、户外游戏等品类的新品榜和热卖榜排名趋势分析
 
 数据由 AI（Claude）采集和分析，输出为 HTML 格式 Newsletter，本地保存 + GitHub Pages 在线发布。
 
@@ -41,7 +41,7 @@ weekly-reports/
 │   │   └── 2026-W25.html
 │   └── archive/
 │       └── index.html          # 历史归档索引
-├── amazon-de/                  # Amazon DE 周报
+├── amazon/                     # Amazon 美欧周报
 │   ├── data/
 │   │   └── 2026-W25.json
 │   ├── reports/
@@ -87,7 +87,7 @@ weekly-reports/
 
 ### 6.1 数据来源
 
-- 德国亚马逊（amazon.de）户外玩具/户外游戏分类
+- 亚马逊美国+欧洲站点（Amazon.com / .de / .co.uk / .fr / .it / .es）户外玩具/户外游戏分类
 - 关注榜单：New Releases（新品榜）、Best Sellers（热卖榜）
 - 每期各 Top 20
 
@@ -198,7 +198,7 @@ EDGE="C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
 ```
 
 ```json
-// amazon-de/data/2026-W25.json
+// amazon/data/2026-W25.json
 {
   "week": "2026-W25",
   "dateRange": "2026-06-15 ~ 2026-06-19",

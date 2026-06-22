@@ -3,12 +3,12 @@
 每周自动生成两份周报：
 
 - **📋 专利周报** — 中国公开专利分析（外贸玩具/产品相关），数据来源 CNIPA / SooPAT
-- **🛒 Amazon DE 周报** — 德国亚马逊户外玩具/游戏新品榜 & 热卖榜排名趋势
+- **🛒 Amazon 美欧周报** — 亚马逊美国+欧洲户外玩具/游戏新品榜 & 热卖榜排名趋势
 
 ## 项目结构
 
 - `patents/` — 专利周报（template.html → reports/ → archive/）
-- `amazon-de/` — Amazon DE 周报（template.html → reports/ → archive/）
+- `amazon/` — Amazon 美欧周报（template.html → reports/ → archive/）
 - `templates/base.css` — 共享样式
 - `.github/workflows/deploy.yml` — GitHub Pages 自动部署
 

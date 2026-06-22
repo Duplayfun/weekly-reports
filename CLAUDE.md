@@ -2,7 +2,7 @@
 
 ## 核心原则：数据真实性第一
 
-**这是本项目最重要的规则，适用于所有周报类型（专利、Amazon DE 及后续新增的任何周报）。**
+**这是本项目最重要的规则，适用于所有周报类型（专利、Amazon 美欧 及后续新增的任何周报）。**
 
 ### 数据核实要求
 
@@ -11,7 +11,7 @@
    - 每条专利的专利号必须在 CNIPA/天眼查/PatentGuru 等数据库中查证属实
    - 专利名称和内容必须与专利号对应，不得张冠李戴
    - 无专利号的数据，即使从新闻中看到，也不得列入完整列表（可在备注中提及）
-3. **Amazon DE 周报**：
+3. **Amazon 美欧 周报**：
    - 产品数据（名称、价格、评分、排名）必须来自可验证的来源
    - 如无法获取实时数据，需明确标注数据来源和时效性
 4. **宁可数据少，宁可报告短，也不能编造**
@@ -34,7 +34,7 @@
 
 ### 数据标注
 
-- 所有数据必须标注来源（如：CNIPA、sina财经、天眼查、amazon.de 等）
+- 所有数据必须标注来源（如：CNIPA、sina财经、天眼查、Amazon 各站点等）
 - 无法 100% 核实但有一定依据的数据，需标注置信度说明
 - 每期报告末尾应有数据说明区域
 
@@ -55,7 +55,7 @@ weekly-reports/
 │   ├── data/                   # JSON 原始数据
 │   ├── reports/                # HTML 报告
 │   └── archive/                # 归档索引
-└── amazon-de/                  # Amazon DE 周报
+└── amazon/                     # Amazon 美欧周报
     ├── template.html
     ├── data/
     ├── reports/
@@ -73,5 +73,5 @@ weekly-reports/
 - HTML/CSS 纯静态，无外部依赖
 - 系统字体栈：`-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif`
 - 专利周报：橙红暖色系 `#9a3412 / #ea580c / #fff7ed`
-- Amazon DE 周报：琥珀暖色系 `#92400e / #f59e0b / #fef3c7`
+- Amazon 美欧周报：琥珀暖色系 `#92400e / #f59e0b / #fef3c7`
 - 文件命名：`{年份}-W{周数}.html`，如 `2026-W25.html`
