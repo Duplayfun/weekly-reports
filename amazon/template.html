@@ -3,105 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amazon 美欧 周报 — 户外玩具/游戏 | [[WEEK_LABEL]]</title>
+<title>Amazon 美欧周报 — 户外玩具/游戏 | [[WEEK_LABEL]]</title>
 <link rel="stylesheet" href="../templates/base.css">
 <style>
-  :root {
-    --color-primary: #92400e;
-    --color-accent: #f59e0b;
-    --color-bg-light: #fef3c7;
-  }
+  :root { --color-primary: #92400e; --color-accent: #f59e0b; --color-bg-light: #fef3c7; }
+  .product-link { color: #1e293b; text-decoration: none; }
+  .product-link:hover { color: #f59e0b; text-decoration: underline; }
+  .highlight-box { padding: 12px; background: #fef3c7; border-radius: 8px; font-size: 12px; color: #78716c; margin: 16px 0; }
+  .market-us { border-left: 4px solid #2563eb; }
+  .market-eu { border-left: 4px solid #7c3aed; }
+  .source-tag { font-size: 10px; color: #94a3b8; }
 </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- ===== 头部 ===== -->
   <header class="report-header">
-    <div class="week-label">Amazon 美欧 周报 · 户外玩具/游戏</div>
+    <div class="week-label">Amazon 美欧周报 · 户外玩具/游戏</div>
     <h1>新品 & 热卖排名趋势</h1>
     <div class="date-range">[[DATE_RANGE]] · 第 [[WEEK_NUM]] 周</div>
   </header>
 
-  <!-- ===== 本周概览 ===== -->
   <div class="summary-card">
     <div class="summary-title">📊 本周概览</div>
     <p>[[SUMMARY_TEXT]]</p>
+    <p style="margin-top:8px;">[[SUMMARY_TAGS]]</p>
   </div>
 
-  <!-- ===== 新品榜 ===== -->
-  <h2 class="section-title">🆕 新品榜 Top 20</h2>
-  <p style="font-size:12px;color:var(--color-text-secondary);margin-bottom:12px;">
-    亚马逊美国+欧洲 Outdoor Spielzeug 分类 · New Releases
-  </p>
+  <!-- ===== 美国站 ===== -->
+  <h2 class="section-title">🇺🇸 美国站 — Amazon.com</h2>
+  <p style="font-size:12px;color:#64748b;margin-bottom:8px;">数据来源：Amazon.com 公开榜单 / 评测站 / 市场分析报告</p>
+  <div class="featured-list">[[US_FEATURED]]</div>
+
+  <!-- ===== 欧洲站 ===== -->
+  <h2 class="section-title">🇪🇺 欧洲站 — Amazon.de / .co.uk / .fr / .it / .es</h2>
+  <p style="font-size:12px;color:#64748b;margin-bottom:8px;">数据来源：Amazon 欧洲各站公开信息 / 行业报告</p>
+  <div class="featured-list">[[EU_FEATURED]]</div>
+
+  <!-- ===== 品类热度对比 ===== -->
+  <h2 class="section-title">📊 美欧户外玩具 — 品类热度对比</h2>
   <div class="table-wrapper">
   <table class="data-table">
-    <thead>
-      <tr>
-        <th class="rank-col">#</th>
-        <th>产品名称</th>
-        <th class="price-col">价格</th>
-        <th class="score-col">评分</th>
-        <th style="width:60px;text-align:center;">热卖</th>
-      </tr>
-    </thead>
-    <tbody>
-      [[NEW_RELEASES_ROWS]]
-    </tbody>
+    <thead><tr><th>品类</th><th>🇺🇸 美国热度</th><th>🇪🇺 欧洲热度</th><th>价位带</th><th>趋势</th></tr></thead>
+    <tbody>[[CATEGORY_ROWS]]</tbody>
   </table>
   </div>
 
-  <!-- ===== 热卖榜 ===== -->
-  <h2 class="section-title">🔥 热卖榜 Top 20</h2>
-  <p style="font-size:12px;color:var(--color-text-secondary);margin-bottom:12px;">
-    亚马逊美国+欧洲 Outdoor Spielzeug 分类 · Best Sellers
-  </p>
-  <div class="table-wrapper">
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th class="rank-col">#</th>
-        <th>产品名称</th>
-        <th class="price-col">价格</th>
-        <th class="score-col">评分</th>
-        <th>趋势</th>
-      </tr>
-    </thead>
-    <tbody>
-      [[BEST_SELLERS_ROWS]]
-    </tbody>
-  </table>
-  </div>
+  <div class="highlight-box">[[DISCLAIMER]]</div>
 
-  <!-- ===== 排名变化追踪 ===== -->
-  <h2 class="section-title">📈 排名变化追踪 — 热卖榜 Top 5</h2>
-  <p style="font-size:12px;color:var(--color-text-secondary);margin-bottom:12px;">
-    近四周排名走势
-  </p>
-  [[TRENDING_CHART]]
-
-  <!-- ===== 统计卡片 ===== -->
-  <h2 class="section-title">📊 本周统计</h2>
-  <div class="stats-row">
-    <div class="stat-card">
-      <div class="stat-number">[[NEW_ON_BESTSELLERS]]</div>
-      <div class="stat-label">新品同时上榜热卖</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">[[AVG_NEW_PRICE]]</div>
-      <div class="stat-label">新品均价</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">[[AVG_BEST_PRICE]]</div>
-      <div class="stat-label">热卖均价</div>
-    </div>
-  </div>
-
-  <!-- ===== 页脚 ===== -->
   <footer class="report-footer">
-    <p>数据来源：Amazon.com / .de / .co.uk / .fr / .it / .es · 分类：Outdoor Toys & Games</p>
+    <p>数据来源：Amazon.com / .de / .co.uk / .fr / .it / .es 公开榜单 · 行业报告</p>
     <p>报告由 AI 辅助生成 · 生成时间：[[GENERATED_AT]]</p>
-    <p><a href="archive/">📂 查看历史周报</a> · <a href="../index.html">🏠 项目首页</a></p>
+    <p><a href="../archive/">📂 查看历史周报</a> · <a href="../../index.html">🏠 项目首页</a></p>
   </footer>
 
 </div>
