@@ -7,10 +7,8 @@
 ### 数据核实要求
 
 1. **每条数据必须来自可追溯的原始来源**，不得编造、推测、拼凑
-2. **专利周报（美国/欧洲/中国三部分）**：
-   - 美国专利：专利号必须在 USPTO/Google Patents 中查证属实
-   - 欧洲专利：专利号必须在 EPO Espacenet/Google Patents 中查证属实
-   - 中国专利：专利号必须在 CNIPA/天眼查/PatentGuru 中查证属实
+2. **专利周报**：
+   - 每条专利的专利号必须在 CNIPA/天眼查/PatentGuru 等数据库中查证属实
    - 专利名称和内容必须与专利号对应，不得张冠李戴
    - 无专利号的数据，即使从新闻中看到，也不得列入完整列表（可在备注中提及）
 3. **Amazon 美欧周报**：
@@ -74,6 +72,6 @@ weekly-reports/
 
 - HTML/CSS 纯静态，无外部依赖
 - 系统字体栈：`-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif`
-- 专利周报（美/欧/中）：橙红暖色系 `#9a3412 / #ea580c / #fff7ed`
+- 专利周报：橙红暖色系 `#9a3412 / #ea580c / #fff7ed`
 - Amazon 美欧周报：琥珀暖色系 `#92400e / #f59e0b / #fef3c7`
 - 文件命名：`{年份}-W{周数}.html`，如 `2026-W25.html`

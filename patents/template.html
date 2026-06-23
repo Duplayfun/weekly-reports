@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>专利周报 — 外贸玩具/产品专利分析 | [[WEEK_LABEL]]</title>
+<title>专利周报 — 外贸玩具/产品相关专利分析 | [[WEEK_LABEL]]</title>
 <link rel="stylesheet" href="../templates/base.css">
 <style>
   :root {
@@ -16,10 +16,8 @@
   .patent-num a:hover { text-decoration: underline; }
   .copy-toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #1e293b; color: #fff; padding: 10px 24px; border-radius: 8px; font-size: 13px; z-index: 9999; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
   .copy-toast.show { opacity: 1; }
-  .region-badge { display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; margin-right: 6px; }
-  .region-us { background: #dbeafe; color: #1e40af; }
-  .region-ep { background: #f3e8ff; color: #7c3aed; }
-  .region-cn { background: #fff7ed; color: #9a3412; }
+  .source-tag { font-size: 10px; color: #94a3b8; }
+  .highlight-box { padding: 12px; background: #fef3c7; border-radius: 8px; font-size: 12px; color: #64748b; margin: 16px 0; }
 </style>
 </head>
 <body>
@@ -28,7 +26,7 @@
 
   <header class="report-header">
     <div class="week-label">专利周报 · 外贸玩具/产品</div>
-    <h1>美国 · 欧洲 · 中国 公开专利分析</h1>
+    <h1>中国公开专利分析</h1>
     <div class="date-range">[[DATE_RANGE]] · 第 [[WEEK_NUM]] 周</div>
   </header>
 
@@ -41,58 +39,30 @@
   <h2 class="section-title">🔥 本周热门关键词</h2>
   <div class="keyword-cloud">[[KEYWORD_TAGS]]</div>
 
-  <!-- ===== 第一部分：美国专利 ===== -->
-  <h2 class="section-title">🇺🇸 美国公开专利 — 精选高外贸潜力</h2>
-  <p style="font-size:12px;color:#64748b;margin-bottom:8px;">数据来源：USPTO / Google Patents</p>
-  <div class="featured-list">[[US_FEATURED_PATENTS]]</div>
+  <h2 class="section-title">📑 精选专利 Top 8</h2>
+  <div class="featured-list">[[FEATURED_PATENTS]]</div>
 
-  <h3 style="font-size:14px;margin:16px 0 8px;">美国完整列表</h3>
-  <div class="table-wrapper">
-  <table class="data-table">
-    <thead><tr><th>专利名称</th><th>申请人</th><th style="width:105px;">专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
-    <tbody>[[US_FULL_LIST]]</tbody>
-  </table>
-  </div>
-
-  <!-- ===== 第二部分：欧洲专利 ===== -->
-  <h2 class="section-title">🇪🇺 欧洲公开专利 — 精选高外贸潜力</h2>
-  <p style="font-size:12px;color:#64748b;margin-bottom:8px;">数据来源：EPO Espacenet / Google Patents</p>
-  <div class="featured-list">[[EP_FEATURED_PATENTS]]</div>
-
-  <h3 style="font-size:14px;margin:16px 0 8px;">欧洲完整列表</h3>
-  <div class="table-wrapper">
-  <table class="data-table">
-    <thead><tr><th>专利名称</th><th>申请人</th><th style="width:105px;">专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
-    <tbody>[[EP_FULL_LIST]]</tbody>
-  </table>
-  </div>
-
-  <!-- ===== 第三部分：中国专利 ===== -->
-  <h2 class="section-title">🇨🇳 中国公开专利 — 精选高外贸潜力</h2>
-  <p style="font-size:12px;color:#64748b;margin-bottom:8px;">数据来源：CNIPA / SooPAT / 天眼查 / PatentGuru</p>
-  <div class="featured-list">[[CN_FEATURED_PATENTS]]</div>
-
-  <h3 style="font-size:14px;margin:16px 0 8px;">中国完整列表</h3>
-  <div class="table-wrapper">
-  <table class="data-table">
-    <thead><tr><th>专利名称</th><th>申请人</th><th style="width:105px;">专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
-    <tbody>[[CN_FULL_LIST]]</tbody>
-  </table>
-  </div>
-
-  <!-- ===== 统计 ===== -->
   <h2 class="section-title">📈 本周统计</h2>
   <div class="stats-row">
-    <div class="stat-card"><div class="stat-number">[[TOTAL_COUNT]]</div><div class="stat-label">三区相关专利</div></div>
+    <div class="stat-card"><div class="stat-number">[[TOTAL_COUNT]]</div><div class="stat-label">本周核实专利</div></div>
     <div class="stat-card"><div class="stat-number">[[HIGH_POTENTIAL_COUNT]]</div><div class="stat-label">高外贸潜力（≥4★）</div></div>
-    <div class="stat-card"><div class="stat-number">[[US_COUNT]]</div><div class="stat-label">🇺🇸 美国</div></div>
-    <div class="stat-card"><div class="stat-number">[[EP_COUNT]]</div><div class="stat-label">🇪🇺 欧洲</div></div>
-    <div class="stat-card"><div class="stat-number">[[CN_COUNT]]</div><div class="stat-label">🇨🇳 中国</div></div>
+    <div class="stat-card"><div class="stat-number">[[KEY_APPLICANTS_COUNT]]</div><div class="stat-label">重点企业</div></div>
   </div>
 
+  <h2 class="section-title">📋 完整专利列表（[[TOTAL_COUNT]] 条，全部已核实）</h2>
+  <p style="font-size:12px;color:#64748b;margin-bottom:12px;">点击 <strong>专利号</strong> → 自动复制 + 打开 CNIPA 官网 → <strong>Ctrl+V</strong> 粘贴查询</p>
+  <div class="table-wrapper">
+  <table class="data-table">
+    <thead><tr><th>专利名称</th><th>申请人</th><th style="width:105px;">专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
+    <tbody>[[FULL_LIST_ROWS]]</tbody>
+  </table>
+  </div>
+
+  <div class="highlight-box">[[DISCLAIMER]]</div>
+
   <footer class="report-footer">
-    <p>数据来源：USPTO / EPO Espacenet / CNIPA / Google Patents / SooPAT / 天眼查</p>
-    <p>报告由 AI 辅助生成 · 生成时间：[[GENERATED_AT]]</p>
+    <p>数据来源：CNIPA / sina财经 / 天眼查 / PatentGuru。全部已逐条核实。</p>
+    <p>点击专利号：自动复制 → 打开 CNIPA → Ctrl+V 粘贴查询 · 报告由 AI 辅助生成 · 生成时间：[[GENERATED_AT]]</p>
     <p><a href="../archive/">📂 查看历史周报</a> · <a href="../../index.html">🏠 项目首页</a></p>
   </footer>
 
@@ -102,9 +72,14 @@ function copyPatent(event, number) {
   event.preventDefault();
   navigator.clipboard.writeText(number).then(function() {
     var toast = document.getElementById('toast');
-    toast.textContent = '✅ 已复制 ' + number;
+    toast.textContent = '✅ 已复制 ' + number + ' → 请在 CNIPA 搜索框粘贴';
     toast.className = 'copy-toast show';
-    setTimeout(function() { toast.className = 'copy-toast'; }, 2000);
+    setTimeout(function() { toast.className = 'copy-toast'; }, 2500);
+  }).catch(function() {
+    var toast = document.getElementById('toast');
+    toast.textContent = '⚠️ 复制失败，请手动复制：' + number;
+    toast.className = 'copy-toast show';
+    setTimeout(function() { toast.className = 'copy-toast'; }, 2500);
   });
   window.open('http://epub.cnipa.gov.cn/', '_blank');
 }
