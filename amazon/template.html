@@ -9,6 +9,8 @@
   :root { --color-primary: #92400e; --color-accent: #f59e0b; --color-bg-light: #fef3c7; }
   .product-link { color: #1e293b; text-decoration: none; }
   .product-link:hover { color: #f59e0b; text-decoration: underline; }
+  .product-link::after { content: ' 🔗'; font-size: 10px; opacity: 0.3; }
+  .product-link:hover::after { opacity: 1; }
   .highlight-box { padding: 12px; background: #fef3c7; border-radius: 8px; font-size: 12px; color: #78716c; margin: 16px 0; }
   .market-us { border-left: 4px solid #2563eb; }
   .market-eu { border-left: 4px solid #7c3aed; }
