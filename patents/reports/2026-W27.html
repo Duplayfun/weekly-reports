@@ -10,8 +10,6 @@
   .patent-num { font-family: monospace; font-size: 12px; white-space: nowrap; }
   .patent-num a { color: #9a3412; text-decoration: none; font-weight: 500; cursor: pointer; }
   .patent-num a:hover { text-decoration: underline; }
-  .copy-toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #1e293b; color: #fff; padding: 10px 24px; border-radius: 8px; font-size: 13px; z-index: 9999; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
-  .copy-toast.show { opacity: 1; }
   .source-tag { font-size: 10px; color: #94a3b8; }
   .highlight-box { padding: 12px; background: #fef3c7; border-radius: 8px; font-size: 12px; color: #64748b; margin: 16px 0; }
 
@@ -85,24 +83,11 @@
     font-size: 12px;
     color: #64748b;
   }
-  .img-modal-footer .btn-cnipa {
-    display: inline-block;
-    padding: 6px 14px;
-    background: #9a3412;
-    color: #fff;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  .img-modal-footer .btn-cnipa:hover { background: #7c2d12; }
   .patent-num a.img-available { border-bottom: 1px dashed #ea580c; }
   .patent-num a.img-available::after { content: ' 🖼️'; font-size: 9px; opacity: 0.5; }
 </style>
 </head>
 <body>
-<div class="copy-toast" id="toast"></div>
-
 <!-- 图片弹窗 -->
 <div class="img-modal-overlay" id="imgModal">
   <div class="img-modal">
@@ -114,8 +99,7 @@
       <img id="modalImg" src="" alt="专利图片" />
     </div>
     <div class="img-modal-footer">
-      <span>📋 已复制专利号到剪贴板</span>
-      <a class="btn-cnipa" href="http://epub.cnipa.gov.cn/" target="_blank">🔍 打开 CNIPA 查询</a>
+      <span>专利号：<strong id="modalPatentIdFooter"></strong></span>
     </div>
   </div>
 </div>
@@ -211,7 +195,7 @@
   </div>
 
   <h2 class="section-title">📋 完整专利列表（17 条，全部已核实）</h2>
-  <p style="font-size:12px;color:#64748b;margin-bottom:12px;">点击 <strong>专利号 🖼️</strong> → 查看专利图片 · 自动复制号码 · 可打开 CNIPA 官网粘贴查询</p>
+  <p style="font-size:12px;color:#64748b;margin-bottom:12px;">点击 <strong>专利号 🖼️</strong> → 查看专利图片</p>
   <div class="table-wrapper">
   <table class="data-table">
     <thead><tr><th>专利名称</th><th>申请人</th><th style="width:108px;">专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
@@ -250,7 +234,7 @@
 
   <footer class="report-footer">
     <p>数据来源：CNIPA / sina财经 / 证券之星 / 天眼查 · 全部已逐条核实</p>
-    <p>点击专利号 🖼️：查看专利图片 + 自动复制号码 · 生成时间：2026-07-04</p>
+    <p>点击专利号 🖼️：查看专利图片 · 生成时间：2026-07-04</p>
     <p><a href="../archive/">📂 查看往期周报</a> · <a href="../../index.html">🏠 首页</a></p>
   </footer>
 
@@ -259,18 +243,11 @@
 /* ===== 图片弹窗 ===== */
 function openPatentImg(event, number) {
   event.preventDefault();
-  // 复制专利号
-  navigator.clipboard.writeText(number).then(function() {
-    var toast = document.getElementById('toast');
-    toast.textContent = '✅ 已复制 ' + number;
-    toast.className = 'copy-toast show';
-    setTimeout(function() { toast.className = 'copy-toast'; }, 2000);
-  }).catch(function(){});
-  // 显示专利图片弹窗
   var modal = document.getElementById('imgModal');
   var img = document.getElementById('modalImg');
   var patentId = document.getElementById('modalPatentId');
   patentId.textContent = number;
+  document.getElementById('modalPatentIdFooter').textContent = number;
   img.src = '../pictures/' + number + '.jpg';
   img.alt = '专利 ' + number + ' 图片';
   img.onerror = function() {
