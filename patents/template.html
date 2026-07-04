@@ -18,10 +18,118 @@
   .copy-toast.show { opacity: 1; }
   .source-tag { font-size: 10px; color: #94a3b8; }
   .highlight-box { padding: 12px; background: #fef3c7; border-radius: 8px; font-size: 12px; color: #64748b; margin: 16px 0; }
+
+  /* ===== 图片弹窗样式 ===== */
+  .img-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-modal-overlay.active { display: flex; }
+  .img-modal {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  .img-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+  }
+  .img-modal-header .patent-id {
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: #9a3412;
+  }
+  .img-modal-header .img-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #64748b;
+    padding: 0 4px;
+    line-height: 1;
+    border-radius: 4px;
+  }
+  .img-modal-header .img-close:hover { color: #1e293b; background: #e2e8f0; }
+  .img-modal-body {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f5f9;
+    max-height: calc(90vh - 60px);
+    overflow: auto;
+  }
+  .img-modal-body img {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .img-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid #e2e8f0;
+    background: #f8fafc;
+    font-size: 12px;
+    color: #64748b;
+  }
+  .img-modal-footer .btn-cnipa {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #9a3412;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .img-modal-footer .btn-cnipa:hover { background: #7c2d12; }
+  .patent-num a.img-available {
+    border-bottom: 1px dashed #ea580c;
+  }
+  .patent-num a.img-available::after {
+    content: ' 🖼️';
+    font-size: 9px;
+    opacity: 0.5;
+  }
 </style>
 </head>
 <body>
 <div class="copy-toast" id="toast"></div>
+
+<!-- 图片弹窗 -->
+<div class="img-modal-overlay" id="imgModal">
+  <div class="img-modal">
+    <div class="img-modal-header">
+      <span class="patent-id" id="modalPatentId"></span>
+      <button class="img-close" onclick="closeImgModal()" title="关闭">&times;</button>
+    </div>
+    <div class="img-modal-body">
+      <img id="modalImg" src="" alt="专利图片" />
+    </div>
+    <div class="img-modal-footer">
+      <span>📋 已复制专利号到剪贴板</span>
+      <a class="btn-cnipa" href="http://epub.cnipa.gov.cn/" target="_blank" id="modalCnipaLink">🔍 打开 CNIPA 查询</a>
+    </div>
+  </div>
+</div>
+
 <div class="container">
 
   <header class="report-header">
@@ -50,7 +158,7 @@
   </div>
 
   <h2 class="section-title">📋 完整专利列表（[[TOTAL_COUNT]] 条，全部已核实）</h2>
-  <p style="font-size:12px;color:#64748b;margin-bottom:12px;">点击 <strong>专利号</strong> → 自动复制 + 打开 CNIPA 官网 → <strong>Ctrl+V</strong> 粘贴查询</p>
+  <p style="font-size:12px;color:#64748b;margin-bottom:12px;">点击 <strong>专利号</strong> → 查看专利图片 · 自动复制号码 · 可打开 CNIPA 官网 <strong>Ctrl+V</strong> 粘贴查询</p>
   <div class="table-wrapper">
   <table class="data-table">
     <thead><tr><th>专利名称</th><th>申请人</th><th style="width:105px;">专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
@@ -62,7 +170,7 @@
 
   <footer class="report-footer">
     <p>数据来源：CNIPA / sina财经 / 天眼查 / PatentGuru。全部已逐条核实。</p>
-    <p>点击专利号：自动复制 → 打开 CNIPA → Ctrl+V 粘贴查询 · 生成时间：[[GENERATED_AT]]</p>
+    <p>点击专利号：查看专利图片 + 自动复制号码 → 打开 CNIPA → Ctrl+V 粘贴查询 · 生成时间：[[GENERATED_AT]]</p>
     <p><a href="../archive/">📂 查看往期周报</a> · <a href="../../index.html">🏠 首页</a></p>
   </footer>
 
@@ -83,6 +191,46 @@ function copyPatent(event, number) {
   });
   window.open('http://epub.cnipa.gov.cn/', '_blank');
 }
+
+/* ===== 图片弹窗逻辑 ===== */
+function openPatentImg(event, number) {
+  event.preventDefault();
+  // 复制专利号
+  navigator.clipboard.writeText(number).then(function() {
+    var toast = document.getElementById('toast');
+    toast.textContent = '✅ 已复制 ' + number;
+    toast.className = 'copy-toast show';
+    setTimeout(function() { toast.className = 'copy-toast'; }, 2000);
+  }).catch(function(){});
+  // 显示专利图片弹窗
+  var modal = document.getElementById('imgModal');
+  var img = document.getElementById('modalImg');
+  var patentId = document.getElementById('modalPatentId');
+  var cnipaLink = document.getElementById('modalCnipaLink');
+  patentId.textContent = number;
+  img.src = '../pictures/' + number + '.jpg';
+  img.alt = '专利 ' + number + ' 图片';
+  img.onerror = function() {
+    img.src = '';
+    img.alt = '⚠️ 图片未找到：' + number + '.jpg（请将图片放入 patents/pictures/ 目录）';
+  };
+  cnipaLink.href = 'http://epub.cnipa.gov.cn/';
+  modal.classList.add('active');
+}
+
+function closeImgModal() {
+  document.getElementById('imgModal').classList.remove('active');
+}
+
+// 点击遮罩关闭
+document.getElementById('imgModal').addEventListener('click', function(e) {
+  if (e.target === this) closeImgModal();
+});
+
+// ESC 关闭
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeImgModal();
+});
 </script>
 </body>
 </html>
