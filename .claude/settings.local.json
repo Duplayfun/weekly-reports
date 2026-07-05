@@ -4,7 +4,9 @@
       "WebFetch(domain:www.amazon.de)",
       "WebSearch",
       "WebFetch(domain:www.pcwelt.de)",
-      "WebFetch(domain:austria.simba-dickie-group.com)"
+      "WebFetch(domain:austria.simba-dickie-group.com)",
+      "Bash(curl -s \"https://duplayfun.github.io/weekly-reports/patents/reports/2026-W27.html\")",
+      "Bash(curl -s \"https://api.github.com/repos/Duplayfun/weekly-reports/actions/runs?branch=master&per_page=1&status=failure\")"
     ]
   }
 }
