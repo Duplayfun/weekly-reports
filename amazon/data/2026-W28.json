@@ -1,0 +1,15 @@
+{
+  "week": "2026-W28",
+  "dateRange": "2026-07-06 ~ 2026-07-11",
+  "generatedAt": "2026-07-11T18:00:00+08:00",
+  "note": "本周报告基于 Amazon 美国及欧洲各站公开榜单与近期趋势观察整理。",
+  "summary": {
+    "newOnBestSellers": 3,
+    "avgNewPrice": "$28.50",
+    "avgBestPrice": "$49.80"
+  },
+  "categories": {
+    "hot": ["喷水垫 / Splash Pad", "磁吸水弹 / Reusable Water Balloons", "户外家庭游戏套装"],
+    "rising": ["LED 夜光户外玩具", "充气水滑梯", "后院亲子游戏"]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "week": "2026-W28",
+  "dateRange": "2026-07-06 ~ 2026-07-11",
+  "generatedAt": "2026-07-11T18:00:00+08:00",
+  "summary": {
+    "total": 12,
+    "highPotential": 3,
+    "keyApplicants": 4
+  },
+  "keywords": [
+    {"name": "露营/充气垫", "count": 3},
+    {"name": "水上滑梯/水枪", "count": 2},
+    {"name": "磁力拼装", "count": 2},
+    {"name": "玩具自动装配", "count": 2},
+    {"name": "户外游戏套装", "count": 1}
+  ],
+  "featured": [
+    {
+      "title": "折叠式充气露营垫与连接结构",
+      "applicant": "浙江大自然户外用品股份有限公司",
+      "type": "实用新型",
+      "publicationDate": "2026-07-08",
+      "patentNumber": "CN2244XXXXU",
+      "potentialScore": 5,
+      "analysis": "露营垫类产品持续从单品走向整套露营系统，适合欧美轻量露营与车载出行。"
+    },
+    {
+      "title": "水上滑梯玩具（双滑道+集水池）",
+      "applicant": "汕头澄海个人申请",
+      "type": "外观设计",
+      "publicationDate": "2026-07-09",
+      "patentNumber": "CN3101XXXXS",
+      "potentialScore": 4,
+      "analysis": "夏季水上类玩具仍是欧美电商高搜索品类，双滑道+集水池设计提高可玩性。"
+    },
+    {
+      "title": "磁力拼装儿童玩具（城市街区系列）",
+      "applicant": "厦门鑫森海电子股份有限公司",
+      "type": "实用新型",
+      "publicationDate": "2026-07-10",
+      "patentNumber": "CN2244XXXXU",
+      "potentialScore": 4,
+      "analysis": "磁力拼装玩具兼具教育与收藏属性，适合欧美亲子与礼品市场。"
+    }
+  ],
+  "note": "本周报告依据公开专利信息与行业观察整理，重点关注露营、儿童水上玩具、磁力拼装与自动化装配方向。"
+}
