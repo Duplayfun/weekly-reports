@@ -1,0 +1,30 @@
+{
+  "week": "2026-W34",
+  "dateRange": "2026-08-17 ~ 2026-08-22",
+  "generatedAt": "2026-09-19T18:00:00+08:00",
+  "status": "pending-verification",
+  "note": "本周检索到 2 条玩具外观设计专利，来源为公开网络（搜狐/新浪财经/今日头条），待 CNIPA 逐条核实。",
+  "keywords": ["露营车玩具", "陀螺玩具", "外观设计", "户外玩具"],
+  "featured": [
+    {
+      "title": "玩具（露营车）",
+      "applicant": "广东高乐股份有限公司",
+      "type": "外观设计",
+      "publicationDate": "2026-08-21",
+      "patentNumber": "CN310164272S",
+      "potentialScore": 5,
+      "source": "https://www.sohu.com/a/1066098326_122014422",
+      "analysis": "露营车造型玩具，贴合欧美户外露营文化，出口潜力较高。"
+    },
+    {
+      "title": "陀螺玩具（枪）",
+      "applicant": "奥飞娱乐/广东奥迪动漫/广州奥飞文化",
+      "type": "外观设计",
+      "publicationDate": "2026-08-21",
+      "patentNumber": "CN310164386S",
+      "potentialScore": 4,
+      "source": "https://www.toutiao.com/article/7677783899426849321/",
+      "analysis": "陀螺对战经典竞技类玩具，带发射器形态增强对抗玩法。"
+    }
+  ]
+}

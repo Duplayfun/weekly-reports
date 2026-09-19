@@ -1,0 +1,15 @@
+{
+  "week": "2026-W29",
+  "dateRange": "2026-07-13 ~ 2026-07-18",
+  "generatedAt": "2026-07-18T18:00:00+08:00",
+  "note": "本周报告基于 Amazon 美国及欧洲各站公开榜单与近期趋势观察整理。",
+  "summary": {
+    "newOnBestSellers": 4,
+    "avgNewPrice": "$29.80",
+    "avgBestPrice": "$51.20"
+  },
+  "categories": {
+    "hot": ["便携露营家具 / Camping Furniture", "磁吸水弹 / Reusable Water Balloons", "户外家庭游戏套装"],
+    "rising": ["宠物互动户外玩具", "便携露营桌椅", "水上派对套装"]
+  }
+}

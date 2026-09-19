@@ -1,0 +1,17 @@
+{
+  "week": "2026-W36",
+  "dateRange": "2026-08-31 ~ 2026-09-05",
+  "generatedAt": "2026-09-19T18:00:00+08:00",
+  "status": "pending-verification",
+  "note": "奥飞娱乐系（奥飞娱乐/广东奥迪动漫/广州奥飞文化）9/1 集中授权约 21 件玩具外观设计专利，来源为搜狐/新浪财经，待 CNIPA 逐条核实。",
+  "keywords": ["陀螺对战", "发射器玩具", "变形玩具", "机器人玩具", "积木玩具", "无人机/遥控玩具", "外观设计"],
+  "featured": [
+    {"title": "无人机玩具（LD）", "patentNumber": "CN310183518S", "type": "外观设计", "publicationDate": "2026-09-01", "potentialScore": 5},
+    {"title": "遥控器玩具（LD）", "patentNumber": "CN310183519S", "type": "外观设计", "publicationDate": "2026-09-01", "potentialScore": 4},
+    {"title": "机器人玩具（GHZS）", "patentNumber": "CN310183577S", "type": "外观设计", "publicationDate": "2026-09-01", "potentialScore": 4},
+    {"title": "变形玩具（HB）", "patentNumber": "CN310183502S", "type": "外观设计", "publicationDate": "2026-09-01", "potentialScore": 4},
+    {"title": "陀螺玩具（YYMY）", "patentNumber": "CN310183582S", "type": "外观设计", "publicationDate": "2026-09-01", "potentialScore": 4},
+    {"title": "积木玩具（DF）", "patentNumber": "CN310183555S", "type": "外观设计", "publicationDate": "2026-09-01", "potentialScore": 4}
+  ],
+  "applicant": "奥飞娱乐股份有限公司 / 广东奥迪动漫玩具有限公司 / 广州奥飞文化传播有限公司"
+}

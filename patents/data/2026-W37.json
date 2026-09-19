@@ -1,0 +1,20 @@
+{
+  "week": "2026-W37",
+  "dateRange": "2026-09-07 ~ 2026-09-12",
+  "generatedAt": "2026-09-19T18:00:00+08:00",
+  "status": "pending-verification",
+  "note": "本周检索到 1 条外观设计专利，来源为天眼查，待 CNIPA 逐条核实。",
+  "keywords": ["花园水枪", "户外戏水", "外观设计"],
+  "featured": [
+    {
+      "title": "花园水枪（M6）",
+      "applicant": "马瑞祥",
+      "type": "外观设计",
+      "publicationDate": "2026-09-11",
+      "patentNumber": "CN310197321S",
+      "potentialScore": 3,
+      "source": "https://m.tianyancha.com/zhuanli/a5e32afade4122f7d16c1c0adca0dbcd",
+      "analysis": "花园水枪属户外戏水类玩具，9 月授权为下一年度夏季新品储备。"
+    }
+  ]
+}
