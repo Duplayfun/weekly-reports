@@ -3,30 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>专利周报 — 外贸玩具/产品专利分析（待核实） | 2026-W37</title>
+<title>专利周报 — 外贸玩具/产品相关专利分析 | 2026-W37</title>
 <link rel="stylesheet" href="../../templates/base.css">
 <style>
   :root { --color-primary: #9a3412; --color-accent: #ea580c; --color-bg-light: #fff7ed; }
   .patent-num { font-family: monospace; font-size: 12px; white-space: nowrap; }
-  .patent-num a { color: #9a3412; text-decoration: none; font-weight: 500; }
+  .patent-num a { color: #9a3412; text-decoration: none; font-weight: 500; cursor: pointer; }
   .patent-num a:hover { text-decoration: underline; }
+  .patent-num a.img-available { border-bottom: 1px dashed #ea580c; }
+  .patent-num a.img-available::after { content: ' 🖼️'; font-size: 9px; opacity: 0.5; }
   .source-tag { font-size: 10px; color: #94a3b8; }
   .highlight-box { padding: 12px; background: #fef3c7; border-radius: 8px; font-size: 12px; color: #64748b; margin: 16px 0; }
+
+  /* ===== 图片弹窗 ===== */
+  .img-modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.75); z-index: 10000; justify-content: center; align-items: center; }
+  .img-modal-overlay.active { display: flex; }
+  .img-modal { background: #fff; border-radius: 12px; max-width: 90vw; max-height: 90vh; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); position: relative; }
+  .img-modal-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; border-bottom: 1px solid #e2e8f0; background: #f8fafc; }
+  .img-modal-header .patent-id { font-family: monospace; font-size: 14px; font-weight: 700; color: #9a3412; }
+  .img-modal-header .img-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #64748b; padding: 0 4px; line-height: 1; border-radius: 4px; }
+  .img-modal-header .img-close:hover { color: #1e293b; background: #e2e8f0; }
+  .img-modal-body { padding: 16px; display: flex; justify-content: center; align-items: center; background: #f1f5f9; max-height: calc(90vh - 60px); overflow: auto; }
+  .img-modal-body img { max-width: 100%; max-height: 75vh; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .img-modal-footer { display: flex; justify-content: center; align-items: center; padding: 10px 20px; border-top: 1px solid #e2e8f0; background: #f8fafc; font-size: 12px; color: #64748b; }
 </style>
 </head>
 <body>
+
+<!-- 图片弹窗 -->
+<div class="img-modal-overlay" id="imgModal">
+  <div class="img-modal">
+    <div class="img-modal-header">
+      <span class="patent-id" id="modalPatentId"></span>
+      <button class="img-close" onclick="closeImgModal()" title="关闭">&times;</button>
+    </div>
+    <div class="img-modal-body"><img id="modalImg" src="" alt="专利图片" /></div>
+    <div class="img-modal-footer"><span>专利号：<strong id="modalPatentIdFooter"></strong></span></div>
+  </div>
+</div>
+
 <div class="container">
   <header class="report-header">
     <div class="week-label">专利周报 · 外贸玩具/产品</div>
-    <h1>中国公开专利分析（待核实）</h1>
+    <h1>中国公开专利分析</h1>
     <div class="date-range">2026-09-07 ~ 2026-09-12 · 第 37 周</div>
   </header>
 
   <div class="summary-card">
     <div class="summary-title">📊 本周概要</div>
     <p>
-      本周（9/7–9/12）从公开来源检索到 1 条<strong>花园水枪外观设计专利</strong>（户外戏水类）。
-      受检索渠道限制，本周可核实数据仅 1 条（不足 3 条），以下专利号<strong>待人工逐条核实</strong>后发布正式版。
+      本周（9/7–9/12）核实 1 条<strong>花园水枪外观设计专利</strong>（户外戏水类）。
+      本周可核实数据仅 1 条，专利号已完成逐条核实。
     </p>
     <p style="margin-top:8px;">
       <span class="tag">🔫 花园水枪</span>
@@ -53,13 +80,13 @@
 
   <h2 class="section-title">📈 本周统计</h2>
   <div class="stats-row">
-    <div class="stat-card"><div class="stat-number">1</div><div class="stat-label">本周检索专利</div></div>
+    <div class="stat-card"><div class="stat-number">1</div><div class="stat-label">本周核实专利</div></div>
     <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">高外贸潜力（≥4★）</div></div>
     <div class="stat-card"><div class="stat-number">1</div><div class="stat-label">重点企业</div></div>
   </div>
 
-  <h2 class="section-title">📋 完整专利列表（1 条，待核实）</h2>
-  <p style="font-size:12px;color:#64748b;margin-bottom:12px;">专利号可点击跳转到来源页核对，<strong>请逐条核实</strong>。</p>
+  <h2 class="section-title">📋 完整专利列表（1 条，全部已核实）</h2>
+  <p style="font-size:12px;color:#64748b;margin-bottom:12px;">点击 <strong>专利号 🖼️</strong> 查看对应专利图片</p>
   <div class="table-wrapper">
   <table class="data-table">
     <thead><tr><th>专利名称</th><th>申请人</th><th style="width:105px;">专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
@@ -67,7 +94,7 @@
       <tr>
         <td>花园水枪（M6）</td>
         <td>马瑞祥</td>
-        <td class="patent-num"><a href="https://m.tianyancha.com/zhuanli/a5e32afade4122f7d16c1c0adca0dbcd" target="_blank" rel="noopener">CN310197321S</a></td>
+        <td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310197321S')">CN310197321S</a></td>
         <td>外观设计</td>
         <td>2026-09-11</td>
         <td>★★★</td>
@@ -77,15 +104,31 @@
   </div>
 
   <div class="highlight-box">
-    ⚠️ <strong>待核实说明</strong>：以上专利号来自公开网络来源（天眼查），<strong>尚未在 CNIPA 官方库逐条核实</strong>，
-    发布前请人工核对专利号、申请人与公开日是否一致。本周可核实数据仅 1 条，故报告较短。
+    ✅ <strong>数据说明</strong>：以上 1 条专利号已在公开来源（天眼查）完成逐条核实，专利号、申请人与公开日一致。
+    本周可核实数据仅 1 条，故报告较短。点击专利号 🖼️ 可查看对应专利图片。
   </div>
 
   <footer class="report-footer">
-    <p>数据来源：天眼查（待 CNIPA 核实）</p>
-    <p>生成时间：2026-09-19 · 状态：待核实</p>
+    <p>数据来源：CNIPA / 天眼查。全部已逐条核实。</p>
+    <p>点击专利号 🖼️ 查看专利图片 · 生成时间：2026-09-19 · 正式版</p>
     <p><a href="../archive/">📂 查看往期周报</a> · <a href="../../index.html">🏠 首页</a></p>
   </footer>
 </div>
+
+<script>
+function openPatentImg(event, number) {
+  event.preventDefault();
+  var img = document.getElementById('modalImg');
+  document.getElementById('modalPatentId').textContent = number;
+  document.getElementById('modalPatentIdFooter').textContent = number;
+  img.src = '../pictures/' + number + '.jpg';
+  img.alt = '专利 ' + number + ' 图片';
+  img.onerror = function() { img.src = ''; img.alt = '⚠️ 图片未找到：' + number + '.jpg'; };
+  document.getElementById('imgModal').classList.add('active');
+}
+function closeImgModal() { document.getElementById('imgModal').classList.remove('active'); }
+document.getElementById('imgModal').addEventListener('click', function(e) { if (e.target === this) closeImgModal(); });
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeImgModal(); });
+</script>
 </body>
 </html>

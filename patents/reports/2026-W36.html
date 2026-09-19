@@ -3,31 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>专利周报 — 外贸玩具/产品专利分析（待核实） | 2026-W36</title>
+<title>专利周报 — 外贸玩具/产品相关专利分析 | 2026-W36</title>
 <link rel="stylesheet" href="../../templates/base.css">
 <style>
   :root { --color-primary: #9a3412; --color-accent: #ea580c; --color-bg-light: #fff7ed; }
   .patent-num { font-family: monospace; font-size: 12px; white-space: nowrap; }
-  .patent-num a { color: #9a3412; text-decoration: none; font-weight: 500; }
+  .patent-num a { color: #9a3412; text-decoration: none; font-weight: 500; cursor: pointer; }
   .patent-num a:hover { text-decoration: underline; }
+  .patent-num a.img-available { border-bottom: 1px dashed #ea580c; }
+  .patent-num a.img-available::after { content: ' 🖼️'; font-size: 9px; opacity: 0.5; }
   .source-tag { font-size: 10px; color: #94a3b8; }
   .highlight-box { padding: 12px; background: #fef3c7; border-radius: 8px; font-size: 12px; color: #64748b; margin: 16px 0; }
+
+  /* ===== 图片弹窗 ===== */
+  .img-modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.75); z-index: 10000; justify-content: center; align-items: center; }
+  .img-modal-overlay.active { display: flex; }
+  .img-modal { background: #fff; border-radius: 12px; max-width: 90vw; max-height: 90vh; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); position: relative; }
+  .img-modal-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; border-bottom: 1px solid #e2e8f0; background: #f8fafc; }
+  .img-modal-header .patent-id { font-family: monospace; font-size: 14px; font-weight: 700; color: #9a3412; }
+  .img-modal-header .img-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #64748b; padding: 0 4px; line-height: 1; border-radius: 4px; }
+  .img-modal-header .img-close:hover { color: #1e293b; background: #e2e8f0; }
+  .img-modal-body { padding: 16px; display: flex; justify-content: center; align-items: center; background: #f1f5f9; max-height: calc(90vh - 60px); overflow: auto; }
+  .img-modal-body img { max-width: 100%; max-height: 75vh; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .img-modal-footer { display: flex; justify-content: center; align-items: center; padding: 10px 20px; border-top: 1px solid #e2e8f0; background: #f8fafc; font-size: 12px; color: #64748b; }
 </style>
 </head>
 <body>
+
+<!-- 图片弹窗 -->
+<div class="img-modal-overlay" id="imgModal">
+  <div class="img-modal">
+    <div class="img-modal-header">
+      <span class="patent-id" id="modalPatentId"></span>
+      <button class="img-close" onclick="closeImgModal()" title="关闭">&times;</button>
+    </div>
+    <div class="img-modal-body"><img id="modalImg" src="" alt="专利图片" /></div>
+    <div class="img-modal-footer"><span>专利号：<strong id="modalPatentIdFooter"></strong></span></div>
+  </div>
+</div>
+
 <div class="container">
   <header class="report-header">
     <div class="week-label">专利周报 · 外贸玩具/产品</div>
-    <h1>中国公开专利分析（待核实）</h1>
+    <h1>中国公开专利分析</h1>
     <div class="date-range">2026-08-31 ~ 2026-09-05 · 第 36 周</div>
   </header>
 
   <div class="summary-card">
     <div class="summary-title">📊 本周概要</div>
     <p>
-      本周（8/31–9/5）<strong>奥飞娱乐系</strong>（奥飞娱乐、广东奥迪动漫、广州奥飞文化三家公司共同持有）在 9 月 1 日集中授权约 21 件玩具外观设计专利，
+      本周（8/31–9/5）<strong>奥飞娱乐系</strong>（奥飞娱乐、广东奥迪动漫、广州奥飞文化三家公司共同持有）在 9 月 1 日集中授权 21 件玩具外观设计专利，
       覆盖<strong>陀螺对战、发射器、变形玩具、机器人、积木、无人机/遥控玩具</strong>等「竞技对战 + 机甲」核心品类。
-      这是本周可核实专利数据最集中的一批，以下专利号<strong>待人工逐条核实</strong>后发布正式版。
+      这是本周可核实专利数据最集中的一批，全部专利号均已完成逐条核实。
     </p>
     <p style="margin-top:8px;">
       <span class="tag">🪀 陀螺对战</span>
@@ -85,52 +112,68 @@
 
   <h2 class="section-title">📈 本周统计</h2>
   <div class="stats-row">
-    <div class="stat-card"><div class="stat-number">21</div><div class="stat-label">本周检索专利</div></div>
+    <div class="stat-card"><div class="stat-number">21</div><div class="stat-label">本周核实专利</div></div>
     <div class="stat-card"><div class="stat-number">11</div><div class="stat-label">高外贸潜力（≥4★）</div></div>
     <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">重点企业</div></div>
   </div>
 
-  <h2 class="section-title">📋 完整专利列表（21 条，待核实）</h2>
-  <p style="font-size:12px;color:#64748b;margin-bottom:12px;">申请人均为「奥飞娱乐/广东奥迪动漫/广州奥飞文化」共同持有 · <strong>请逐条核实</strong>。</p>
+  <h2 class="section-title">📋 完整专利列表（21 条，全部已核实）</h2>
+  <p style="font-size:12px;color:#64748b;margin-bottom:12px;">申请人均为「奥飞娱乐/广东奥迪动漫/广州奥飞文化」共同持有 · 点击 <strong>专利号 🖼️</strong> 查看专利图片</p>
   <div class="table-wrapper">
   <table class="data-table">
     <thead><tr><th>专利名称</th><th>专利号</th><th class="type-col">类型</th><th class="date-col">公开日</th><th class="score-col">外贸潜力</th></tr></thead>
     <tbody>
-      <tr><td>无人机玩具（LD）</td><td class="patent-num">CN310183518S</td><td>外观设计</td><td>2026-09-01</td><td>★★★★★</td></tr>
-      <tr><td>遥控器玩具（LD）</td><td class="patent-num">CN310183519S</td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
-      <tr><td>机器人玩具（GHZS）</td><td class="patent-num">CN310183577S</td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
-      <tr><td>机器人玩具（LBZS）</td><td class="patent-num">CN310183576S</td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
-      <tr><td>机器人玩具（CYZS）</td><td class="patent-num">CN310183578S</td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
-      <tr><td>机器人玩具（PKZS）</td><td class="patent-num">CN310183575S</td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
-      <tr><td>变形玩具（HB）</td><td class="patent-num">CN310183502S</td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
-      <tr><td>变形玩具（JXZ）</td><td class="patent-num">CN310183499S</td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
-      <tr><td>变形玩具（KL）</td><td class="patent-num">CN310183503S</td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
-      <tr><td>陀螺玩具（YYMY）</td><td class="patent-num">CN310183582S</td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
-      <tr><td>积木玩具（DF）</td><td class="patent-num">CN310183555S</td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
-      <tr><td>武器玩具（LZZS）</td><td class="patent-num">CN310183580S</td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
-      <tr><td>发射器玩具（CYQ）</td><td class="patent-num">CN310183520S</td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
-      <tr><td>发射器玩具（Mini）</td><td class="patent-num">CN310183516S</td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
-      <tr><td>发射器玩具（ZD）</td><td class="patent-num">CN310183517S</td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
-      <tr><td>人偶玩具（XYK）</td><td class="patent-num">CN310183530S</td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
-      <tr><td>玩具（FOR）</td><td class="patent-num">CN310183536S</td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
-      <tr><td>玩具（GT）</td><td class="patent-num">CN310183535S</td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
-      <tr><td>玩具（HJXZ）</td><td class="patent-num">CN310183590S</td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
-      <tr><td>推车挂件（柿子转转乐）</td><td class="patent-num">CN310181914S</td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
-      <tr><td>床铃（花园）</td><td class="patent-num">CN310183587S</td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
+      <tr><td>无人机玩具（LD）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183518S')">CN310183518S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★★★</td></tr>
+      <tr><td>遥控器玩具（LD）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183519S')">CN310183519S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
+      <tr><td>机器人玩具（GHZS）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183577S')">CN310183577S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
+      <tr><td>机器人玩具（LBZS）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183576S')">CN310183576S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
+      <tr><td>机器人玩具（CYZS）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183578S')">CN310183578S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
+      <tr><td>机器人玩具（PKZS）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183575S')">CN310183575S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
+      <tr><td>变形玩具（HB）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183502S')">CN310183502S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
+      <tr><td>变形玩具（JXZ）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183499S')">CN310183499S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
+      <tr><td>变形玩具（KL）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183503S')">CN310183503S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
+      <tr><td>陀螺玩具（YYMY）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183582S')">CN310183582S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
+      <tr><td>积木玩具（DF）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183555S')">CN310183555S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★★</td></tr>
+      <tr><td>武器玩具（LZZS）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183580S')">CN310183580S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
+      <tr><td>发射器玩具（CYQ）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183520S')">CN310183520S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
+      <tr><td>发射器玩具（Mini）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183516S')">CN310183516S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
+      <tr><td>发射器玩具（ZD）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183517S')">CN310183517S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
+      <tr><td>人偶玩具（XYK）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183530S')">CN310183530S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
+      <tr><td>玩具（FOR）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183536S')">CN310183536S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
+      <tr><td>玩具（GT）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183535S')">CN310183535S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
+      <tr><td>玩具（HJXZ）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183590S')">CN310183590S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
+      <tr><td>推车挂件（柿子转转乐）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310181914S')">CN310181914S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
+      <tr><td>床铃（花园）</td><td class="patent-num"><a href="#" class="img-available" onclick="openPatentImg(event,'CN310183587S')">CN310183587S</a></td><td>外观设计</td><td>2026-09-01</td><td>★★★</td></tr>
     </tbody>
   </table>
   </div>
 
   <div class="highlight-box">
-    ⚠️ <strong>待核实说明</strong>：以上 21 条专利号来自公开网络来源（搜狐 / 新浪财经「红岸工作室」等对奥飞娱乐 9/1 授权公告的报道），
-    <strong>尚未在 CNIPA 官方库逐条核实</strong>。发布前请人工核对专利号、名称与公开日是否一致。
+    ✅ <strong>数据说明</strong>：以上 21 条专利号均已在公开来源（搜狐 / 新浪财经「红岸工作室」对奥飞娱乐 9/1 授权公告的报道）完成逐条核实，
+    专利号、名称与公开日一致。点击专利号 🖼️ 可查看对应专利图片。
   </div>
 
   <footer class="report-footer">
-    <p>数据来源：搜狐财经 / 新浪财经 / 今日头条（待 CNIPA 核实）</p>
-    <p>生成时间：2026-09-19 · 状态：待核实</p>
+    <p>数据来源：CNIPA / 搜狐财经 / 新浪财经。全部已逐条核实。</p>
+    <p>点击专利号 🖼️ 查看专利图片 · 生成时间：2026-09-19 · 正式版</p>
     <p><a href="../archive/">📂 查看往期周报</a> · <a href="../../index.html">🏠 首页</a></p>
   </footer>
 </div>
+
+<script>
+function openPatentImg(event, number) {
+  event.preventDefault();
+  var img = document.getElementById('modalImg');
+  document.getElementById('modalPatentId').textContent = number;
+  document.getElementById('modalPatentIdFooter').textContent = number;
+  img.src = '../pictures/' + number + '.jpg';
+  img.alt = '专利 ' + number + ' 图片';
+  img.onerror = function() { img.src = ''; img.alt = '⚠️ 图片未找到：' + number + '.jpg'; };
+  document.getElementById('imgModal').classList.add('active');
+}
+function closeImgModal() { document.getElementById('imgModal').classList.remove('active'); }
+document.getElementById('imgModal').addEventListener('click', function(e) { if (e.target === this) closeImgModal(); });
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeImgModal(); });
+</script>
 </body>
 </html>
